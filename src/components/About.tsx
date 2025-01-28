@@ -1,4 +1,3 @@
-import React from 'react';
 import { Code2, Brain, Trophy, Rocket } from 'lucide-react';
 import { SectionTitle } from './ui/SectionTitle';
 import { AboutCard } from './about/AboutCard';
