@@ -38,13 +38,12 @@ export function GitHub() {
 
                 {/* Contribution Graph */}
                 <div className="mb-12 flex flex-col items-center">
-                    <div className="overflow-hidden relative">
+                    <div className="w-full overflow-hidden relative">
                         <GitHubCalendar
                             username="decodewithdeepak"
-                            blockSize={15}
+                            blockSize={15.6}
                             blockMargin={5}
-                            colorScheme="dark"
-                            // colorScheme="light"
+                            colorScheme="light"
                         />
                     </div>
 
