@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import GitHubCalendar from 'react-github-calendar';
 import { SectionTitle } from './ui/SectionTitle';
 
 interface Repo {
@@ -37,21 +38,15 @@ export function GitHub() {
 
                 {/* Contribution Graph */}
                 <div className="mb-12 flex flex-col items-center">
-                    <div className="w-full max-w-full overflow-hidden relative aspect-w-16 aspect-h-3">
-                        <iframe
-                            src="https://www.gitch.art/api/og/decodewithdeepak?color=1d4ed8"
-                            className="absolute w-full h-full rounded-lg shadow-md "
-                        ></iframe>
-                    </div>
-                    
-                    {/* <div className="relative w-full max-w-full rounded-lg overflow-hidden">
-                        <img
-                            src="https://www.gitch.art/api/og/decodewithdeepak?color=1d4ed8"
-                            alt="GitHub Contributions Graph"
-                            className="w-full h-auto"
-                            style={{ aspectRatio: '16/3' }}
+                    <div className="overflow-hidden relative">
+                        <GitHubCalendar
+                            username="decodewithdeepak"
+                            blockSize={15}
+                            blockMargin={5}
+                            colorScheme="dark"
+                            // colorScheme="light"
                         />
-                    </div> */}
+                    </div>
 
                     <p className="mt-6 text-lg text-center text-gray-600 dark:text-gray-300 max-w-3xl">
                         My GitHub contributions reflect my consistent commitment to open-source development
