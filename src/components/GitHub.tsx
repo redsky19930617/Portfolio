@@ -44,6 +44,8 @@ export function GitHub() {
                             blockSize={15.6}
                             blockMargin={5}
                             colorScheme="light"
+                            theme={{
+                                light: ["#cbd5e0", "#60a5fa", "#4c75ff", "#1a53e6", "#003bb5"]                            }}
                         />
                     </div>
 
