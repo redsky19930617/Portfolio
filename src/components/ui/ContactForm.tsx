@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send } from 'lucide-react';
+import { LuMessageSquareShare } from "react-icons/lu";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -106,7 +106,7 @@ export function ContactForm() {
         }`}
       >
         {status === 'submitting' ? 'Sending...' : 'Send Message'}
-        {status !== 'submitting' && <Send className="w-5 h-5" />}
+        {status !== 'submitting' && <LuMessageSquareShare className="w-5 h-5" />}
       </button>
 
       {status === 'success' && (
