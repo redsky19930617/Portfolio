@@ -38,7 +38,7 @@ export function Skills() {
               {skills.map((tech) => (
                 <div
                   key={tech.name}
-                  className="flex flex-col items-center p-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-200 dark:bg-gray-800 shadow-md hover:shadow-xl hover:scale-105 transform transition-transform duration-300"
+                  className="flex flex-col items-center p-2 sm:p-4 sm:border border-gray-300 dark:border-gray-600 rounded-lg  shadow-md hover:shadow-xl hover:scale-105 transform transition-transform duration-300"
                 >
                   <tech.icon size={40} color={tech.color} />
                   <span className="text-sm font-medium text-gray-800 dark:text-gray-200 mt-2">{tech.name}</span>
