@@ -4,6 +4,11 @@ export function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+      // Disable custom cursor for touch devices
+      return;
+    }
+
     const handleMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
