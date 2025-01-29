@@ -13,6 +13,7 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { LoadingScreen } from './components/loading/LoadingScreen';
 import { useLoading } from './hooks/useLoading';
+import { CustomCursor } from "./components/ui/CustomCursor";
 import { Analytics } from '@vercel/analytics/react';
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
           isLoading ? 'opacity-0' : 'opacity-100'
         }`}
       >
-        <Navbar />
+      <CustomCursor />
+      <Navbar />
         <Hero />
         <About />
         <Skills />
