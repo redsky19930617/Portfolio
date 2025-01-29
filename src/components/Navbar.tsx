@@ -69,10 +69,6 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-          </div>
-
-          {/* Desktop Actions */}
-          <div className="hidden lg:flex items-center space-x-4">
             <ThemeToggle isDark={isDark} onToggle={toggleTheme} />
             <Link
               href="#contact"
@@ -107,8 +103,8 @@ export function Navbar() {
                   href={link.href}
                   className={`block px-3 py-2 rounded-md text-base font-medium text-center text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800
                     ${activeLink === link.href
-                    ? 'font-semibold text-blue-600 dark:text-blue-400'
-                    : ''
+                      ? 'font-semibold text-blue-600 dark:text-blue-400'
+                      : ''
                     }`}
                   onClick={() => {
                     setActiveLink(link.href);
@@ -121,6 +117,7 @@ export function Navbar() {
               <Link
                 href="#contact"
                 className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 hover:text-white dark:text-white dark:hover:text-white"
+                onClick={() => setIsOpen(false)}
               >
                 Request a Project
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
