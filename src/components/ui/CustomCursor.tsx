@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 
 export function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
     if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-      // Disable custom cursor for touch devices
+      setIsTouchDevice(true);
       return;
     }
 
@@ -19,6 +20,10 @@ export function CustomCursor() {
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
+  if (isTouchDevice) {
+    return null;
+  }
 
   return (
     <>
