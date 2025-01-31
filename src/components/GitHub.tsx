@@ -38,14 +38,15 @@ export function GitHub() {
 
                 {/* Contribution Graph */}
                 <div className="mb-12 flex flex-col items-center">
-                    <div className="w-full overflow-hidden relative">
+                    {/* Card-like container for the GitHub calendar */}
+                    <div className="w-full p-6 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg">
                         <GitHubCalendar
                             username="decodewithdeepak"
-                            blockSize={15.6}
+                            blockSize={14.7}
                             blockMargin={5}
                             colorScheme="light"
                             theme={{
-                                light: ["#cbd5e0", "#60a5fa", "#1a53e6", "#1c3dff", "#1c3dff"]
+                                light: ["#afb8c2", "#60a5fa", "#1a53e6", "#1c3dff", "#1c3dff"]
                             }}
                         />
                     </div>
@@ -65,7 +66,7 @@ export function GitHub() {
                             href={repo.html_url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block p-6 bg-gray-200 dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-transform duration-300 transform hover:scale-105"
+                            className="block p-6 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-transform duration-300 transform hover:scale-105"
                         >
                             <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400">
                                 {repo.name}
