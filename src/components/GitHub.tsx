@@ -42,7 +42,7 @@ export function GitHub() {
                     <div className="w-full p-6 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg">
                         <GitHubCalendar
                             username="decodewithdeepak"
-                            blockSize={14.7}
+                            blockSize={14.6}
                             blockMargin={5}
                             colorScheme="light"
                             theme={{
