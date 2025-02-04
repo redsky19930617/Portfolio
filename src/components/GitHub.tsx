@@ -17,13 +17,13 @@ export function GitHub() {
     useEffect(() => {
         fetch('https://api.github.com/users/decodewithdeepak/repos?sort=pushed&direction=desc&per_page=3')
             .then((response) => response.json())
-            .then((data) =>
+            .then((data: Repo[]) =>
                 setRepos(
-                    data.map((repo: any) => ({
+                    data.map((repo) => ({
                         name: repo.name,
                         description: repo.description,
-                        stars: repo.stargazers_count,
-                        forks: repo.forks_count,
+                        stars: repo.stars,
+                        forks: repo.forks,
                         language: repo.language,
                         html_url: repo.html_url,
                     }))
