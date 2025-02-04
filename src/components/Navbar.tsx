@@ -55,7 +55,8 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all 
+                className={`text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400
+                  hover:scale-105 hover:border-b-2 hover:border-blue-600 dark:hover:border-blue-400
                   ${activeLink === link.href ? 'font-semibold text-blue-600 dark:text-blue-400' : ''}`}
                 onClick={() => setActiveLink(link.href)}
               >
