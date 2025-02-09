@@ -40,7 +40,7 @@ export function Navbar() {
     <>
       <LoadingScreen isLoading={isLogoAnimating} />
       <nav
-        className={`fixed top-2 left-1/2 transform -translate-x-1/2 z-50 w-[90%] max-w-6xl rounded-xl
+        className={`fixed top-2 left-1/2 transform -translate-x-1/2 z-50 w-[90%] max-w-6xl rounded-2xl
                     ${isScrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md outline outline-1 outline-blue-600' : 'bg-transparent'}`}
       >
         <div className="flex items-center justify-between h-12 px-4">
