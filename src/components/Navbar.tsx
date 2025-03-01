@@ -30,10 +30,11 @@ export function Navbar() {
     { href: '#projects', label: 'Projects' },
     { href: '#github', label: 'GitHub' },
     { href: '#leetcode', label: 'Leetcode' },
+    { href: '#badges', label: 'Badges' },
+    { href: "#blogs", label: "Blogs" },
     { href: '#experience', label: 'Experience' },
     { href: '#certifications', label: 'Certifications' },
     { href: '#education', label: 'Education' },
-    { href: '#contact', label: 'Contact' },
   ];
 
   return (
@@ -50,7 +51,7 @@ export function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-6 items-center">
+          <div className="hidden lg:flex space-x-5 items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
