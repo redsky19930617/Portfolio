@@ -1,7 +1,6 @@
 import { Code2, Brain, Trophy, Rocket } from 'lucide-react';
 import { SectionTitle } from './ui/SectionTitle';
-import { AboutCard } from './about/AboutCard';
-import { Stats } from './about/Stats';
+import { AboutCard } from './ui/AboutCard';
 
 export function About() {
   const cards = [
@@ -50,7 +49,6 @@ export function About() {
             </p>
           </div>
 
-          <Stats />
         </div>
         
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
