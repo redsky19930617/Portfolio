@@ -5,11 +5,12 @@ import { useTheme } from '../hooks/useTheme';
 import { ThemeToggle } from './ui/ThemeToggle';
 import { useAnimatedLogo } from '../hooks/useAnimatedLogo';
 import { LoadingScreen } from './loading/LoadingScreen';
+import { motion } from 'framer-motion';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState('#home');
+  const [activeSection, setActiveSection] = useState('');
   const { isDark, setIsDark } = useTheme();
   const { isLogoAnimating, handleLogoClick } = useAnimatedLogo();
 
@@ -17,6 +18,22 @@ export function Navbar() {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSection = entries.find((entry) => entry.isIntersecting);
+        if (visibleSection) {
+          setActiveSection(visibleSection.target.id);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
 
   const toggleTheme = () => {
@@ -31,7 +48,7 @@ export function Navbar() {
     { href: '#github', label: 'GitHub' },
     { href: '#leetcode', label: 'Leetcode' },
     { href: '#badges', label: 'Badges' },
-    { href: "#blogs", label: "Blogs" },
+    { href: '#blogs', label: 'Blogs' },
     { href: '#experience', label: 'Experience' },
     { href: '#certifications', label: 'Certifications' },
     { href: '#education', label: 'Education' },
@@ -51,19 +68,24 @@ export function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-5 items-center">
+          <div className="hidden lg:flex space-x-5 items-center relative">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400
-                  hover:scale-105 hover:border-b-2 hover:border-blue-600 dark:hover:border-blue-400
-                  ${activeLink === link.href ? 'font-semibold text-blue-600 dark:text-blue-400' : ''}`}
-                onClick={() => setActiveLink(link.href)}
+                className="relative text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
               >
                 {link.label}
+                {activeSection === link.href.substring(1) && (
+                  <motion.div
+                    layoutId="underline"
+                    className="absolute -bottom-1 left-0 w-full h-[2px] bg-blue-600 dark:bg-blue-400"
+                    transition={{ type: 'spring', stiffness: 500, damping: 20 }} // Faster animation
+                  />
+                )}
               </Link>
             ))}
+
             <ThemeToggle isDark={isDark} onToggle={toggleTheme} />
             <Link
               href="#contact"
@@ -95,10 +117,8 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`block px-3 py-2 rounded-md text-sm text-center text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800
-                    ${activeLink === link.href ? 'font-semibold text-blue-600 dark:text-blue-400' : ''}`}
+                  className={`block px-3 py-2 rounded-md text-sm text-center text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800`}
                   onClick={() => {
-                    setActiveLink(link.href);
                     setIsOpen(false);
                   }}
                 >
