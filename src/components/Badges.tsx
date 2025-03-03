@@ -64,7 +64,7 @@ export function Badges() {
       <div className="container mx-auto max-w-6xl px-8">
         <SectionTitle>Coding Badges</SectionTitle>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 sm:gap-8 gap-4">
           {badges.map((badge) => (
             <a
               key={badge.platform}
