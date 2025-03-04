@@ -1,50 +1,51 @@
-import { User, Code2, Target, Lightbulb } from "lucide-react";
+import { User2, Code2, Lightbulb } from "lucide-react";
+import { GoGoal } from "react-icons/go";
 import { SectionTitle } from "./ui/SectionTitle";
 
-export function About() {
-  const aboutSections = [
-    {
-      icon: User,
-      title: "Who I Am",
-      description: [
-        "A passionate full-stack developer with a strong foundation in software engineering.",
-        "Enjoy solving complex problems and creating scalable applications.",
-        "Always exploring new technologies and improving my skills.",
-      ],
-      color: "bg-blue-600",
-    },
-    {
-      icon: Code2,
-      title: "What I Do",
-      description: [
-        "Develop high-performance web applications using modern tech stacks.",
-        "Solve algorithmic problems and optimize code efficiency.",
-        "Contribute to open-source projects and stay updated with industry trends.",
-      ],
-      color: "bg-purple-600",
-    },
-    {
-      icon: Target,
-      title: "My Goals",
-      description: [
-        "Build impactful tech products that solve real-world challenges at a large scale.",
-        "Advance as a full-stack developer by mastering new frameworks.",
-        "Grow the developer community by sharing knowledge and open-source contributions.",
-      ],
-      color: "bg-green-600",
-    },
-    {
-      icon: Lightbulb,
-      title: "My Philosophy",
-      description: [
-        "Technology should simplify and enhance lives, not complicate them.",
-        "Good software is not just about writing code but solving problems effectively.",
-        "Continuous learning is the key to staying ahead in the fast-evolving tech industry.",
-      ],
-      color: "bg-orange-600",
-    },
-  ];
+const aboutSections = [
+  {
+    icon: User2,
+    title: "Who I Am",
+    description: [
+      "A full-stack developer having interest in software engineering.",
+      "Enjoy solving problems and building scalable applications.",
+      "Always learning new technologies to improve my skills.",
+    ],
+    color: "bg-blue-600",
+  },
+  {
+    icon: Code2,
+    title: "What I Do",
+    description: [
+      "Develop high-performance web apps using modern tech stacks.",
+      "Solve algorithmic problems and optimize code efficiency.",
+      "Contribute to open-source and follow industry trends.",
+    ],
+    color: "bg-purple-600",
+  },
+  {
+    icon: GoGoal,
+    title: "My Goals",
+    description: [
+      "Build tech products that solve real-world challenges at scale.",
+      "Advance as a full-stack developer with modern frameworks.",
+      "Grow the dev community through open-source contributions.",
+    ],
+    color: "bg-green-600",
+  },
+  {
+    icon: Lightbulb,
+    title: "My Philosophy",
+    description: [
+      "Technology should simplify lives, not complicate them.",
+      "Great software solves problems, not just writes code.",
+      "Continuous learning keeps you ahead in tech.",
+    ],
+    color: "bg-orange-600",
+  },
+];
 
+export function About() {
   return (
     <section id="about" className="py-20 relative overflow-hidden">
       {/* Background Elements */}
@@ -57,12 +58,11 @@ export function About() {
 
         {/* Introduction */}
         <div className="max-w-5xl mx-auto mb-16 text-center">
-          <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-            Hey there! 👋 I'm <span className="text-blue-600 font-semibold">Deepak Modi</span>,  
-            a Full-Stack Developer and final-year Computer Science Engineering student.  
-            My journey in tech has been about learning, experimenting, and building—from solving  
-            complex coding problems to developing scalable web applications.  
-            I thrive on tackling real-world challenges and pushing the boundaries of technology.
+          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            Hey there! 👋 I'm <span className="text-blue-600 font-semibold">Deepak Modi</span>,
+            a Full-Stack Developer and final-year Computer Science Engineering student.
+            I love transforming ideas into scalable web applications and solving complex coding challenges. 
+            My journey in tech revolves around continuous learning, experimenting with new technologies, and building solutions that make an impact.
           </p>
 
           <div className="mt-6 flex justify-center">
