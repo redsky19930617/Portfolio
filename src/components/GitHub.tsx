@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import GitHubCalendar from "react-github-calendar";
-import { Github } from "lucide-react";
 import { SectionTitle } from "./ui/SectionTitle";
+import { Github } from "lucide-react";
 
 interface Repo {
     name: string;
-    description: string;
+    description?: string;
     stars: number;
     forks: number;
-    language: string;
+    language?: string;
     html_url: string;
 }
 
@@ -33,14 +33,14 @@ export function GitHub() {
 
         fetch("https://api.github.com/users/decodewithdeepak/repos?sort=pushed&direction=desc&per_page=3")
             .then((response) => response.json())
-            .then((data: Repo[]) =>
+            .then((data) =>
                 setRepos(
-                    data.map((repo) => ({
+                    data.map((repo: any) => ({
                         name: repo.name,
-                        description: repo.description,
-                        stars: repo.stars,
+                        description: repo.description || "No description available",
+                        stars: repo.stargazers_count,
                         forks: repo.forks,
-                        language: repo.language,
+                        language: repo.language || "Unknown",
                         html_url: repo.html_url,
                     }))
                 )
@@ -67,7 +67,7 @@ export function GitHub() {
                         />
                     </div>
 
-                    <p className="mt-8 text-lg text-center text-gray-600 dark:text-gray-300 max-w-3xl">
+                    <p className="mt-8 text-lg text-center text-gray-600 dark:text-gray-300 max-w-5xl">
                         My GitHub contributions reflect my consistent commitment to open-source development
                         and personal projects. Explore my repositories to learn more about the projects I've worked on
                         and the skills I bring to the table.
@@ -104,7 +104,6 @@ export function GitHub() {
                 {/* GitHub Profile Widget */}
                 {user && (
                     <div className="flex flex-col md:flex-row items-center justify-between bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg p-6 shadow-lg">
-
                         {/* Avatar & Name */}
                         <div className="flex items-center space-x-4">
                             <img
@@ -123,7 +122,7 @@ export function GitHub() {
                             {user.bio}
                         </p>
 
-                        {/* Followers, Repos, Profile Link (Wraps in Mobile View) */}
+                        {/* Followers, Repos, Profile Link */}
                         <div className="flex flex-wrap items-center justify-center md:justify-start space-x-4 md:space-x-6 text-gray-600 dark:text-gray-400 mt-4 md:mt-0">
                             <span className="flex items-center gap-1 text-sm">👥 {user.followers} Followers</span>
                             <span className="flex items-center gap-1 text-sm">📦 {user.public_repos} Repos</span>
