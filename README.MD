@@ -63,6 +63,6 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 
 Feel free to reach out to me through any of the following channels:
 
-- **Email**: [deepakmodi@example.com](mailto:deepakmodi867@gmail.com)
+- **Email**: [deepakmodi867@gmail.com](mailto:deepakmodi867@gmail.com)
 - **LinkedIn**: [linkedin.com/in/deepakmodi1](https://linkedin.com/in/deepakmodi1)
 - **Website**: [deepakmodi.vercel.app](https://deepakmodi.vercel.app)
