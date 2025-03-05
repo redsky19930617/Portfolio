@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from './Link';
 import { SocialLinks } from './hero/SocialLinks';
+import { FaReact } from 'react-icons/fa';
+import { SiVite } from 'react-icons/si';
 
 interface FooterLinkProps {
   href: string;
@@ -26,10 +28,14 @@ export function Footer() {
     { href: '#about', label: 'About' },
     { href: '#skills', label: 'Skills' },
     { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' },
-    { href: '#education', label: 'Education' },
+    { href: '#github', label: 'GitHub' },
+    { href: '#leetcode', label: 'Leetcode' },
+    { href: '#badges', label: 'Badges' },
+    { href: '#blogs', label: 'Blogs' },
     { href: '#experience', label: 'Experience' },
     { href: '#certifications', label: 'Certifications' },
+    { href: '#education', label: 'Education' },
+    { href: '#contact', label: 'Contact' },
   ];
 
   return (
@@ -54,9 +60,11 @@ export function Footer() {
           {/* Copyright */}
           <div className="text-sm text-gray-500 dark:text-gray-400 text-center">
             <p>© {currentYear} Deepak Modi. All rights reserved.</p>
-            <p className="flex items-center justify-center gap-1">
-              Made with <span className="text-red-500 animate-pulse">❤️</span> in India
+            <p className="flex items-center justify-center gap-2">
+              Built with <FaReact className="w-8 h-8 text-blue-500 animate-spin" /> using
+              <SiVite className="w-8 h-8 text-yellow-500 animate-pulse" />
             </p>
+
           </div>
         </div>
       </div>

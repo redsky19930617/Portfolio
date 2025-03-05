@@ -66,7 +66,7 @@ export function About() {
           </p>
 
           <div className="mt-6 flex justify-center">
-            <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 px-4 py-2 rounded-lg shadow">
+            <span className="text-sm sm:text-base inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 px-4 py-2 rounded-lg shadow">
               🚀 I like to build products and solve problems
             </span>
           </div>
