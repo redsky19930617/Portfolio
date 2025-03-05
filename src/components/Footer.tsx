@@ -61,8 +61,8 @@ export function Footer() {
           <div className="text-sm text-gray-500 dark:text-gray-400 text-center">
             <p>© {currentYear} Deepak Modi. All rights reserved.</p>
             <p className="flex items-center justify-center gap-2">
-              Built with <FaReact className="w-8 h-8 text-blue-500 animate-spin" /> using
-              <SiVite className="w-8 h-8 text-yellow-500 animate-pulse" />
+              Built with <FaReact className="w-6 h-6 text-blue-500 animate-spin" /> using
+              <SiVite className="w-6 h-6 text-yellow-500 animate-pulse" />
             </p>
 
           </div>
