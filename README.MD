@@ -32,6 +32,70 @@ Check it out live at: [https://deepakmodi.vercel.app/](https://deepakmodi.vercel
 
 ---
 
+## 🚀 Directory Structure:
+└── decodewithdeepak-portfolio/
+    ├── README.MD
+    ├── LICENSE
+    ├── eslint.config.js
+    ├── index.html
+    ├── package.json
+    ├── postcss.config.js
+    ├── tailwind.config.js
+    ├── tsconfig.app.json
+    ├── tsconfig.json
+    ├── tsconfig.node.json
+    ├── vite.config.ts
+    ├── public/
+    │   └── assets/
+    └── src/
+        ├── App.tsx
+        ├── index.css
+        ├── main.tsx
+        ├── vite-env.d.ts
+        ├── components/
+        │   ├── About.tsx
+        │   ├── Badges.tsx
+        │   ├── Blogs.tsx
+        │   ├── Certifications.tsx
+        │   ├── Contact.tsx
+        │   ├── Education.tsx
+        │   ├── Experience.tsx
+        │   ├── Footer.tsx
+        │   ├── GitHub.tsx
+        │   ├── Hero.tsx
+        │   ├── Leetcode.tsx
+        │   ├── Link.tsx
+        │   ├── Navbar.tsx
+        │   ├── Projects.tsx
+        │   ├── Skills.tsx
+        │   ├── hero/
+        │   │   ├── ActionButtons.tsx
+        │   │   ├── ContactInfo.tsx
+        │   │   └── SocialLinks.tsx
+        │   ├── loading/
+        │   │   ├── HandwritingAnimation.tsx
+        │   │   ├── LoadingScreen.tsx
+        │   │   └── svgPaths.ts
+        │   └── ui/
+        │       ├── AboutCard.tsx
+        │       ├── BlogCard.tsx
+        │       ├── CertificationCard.tsx
+        │       ├── ContactForm.tsx
+        │       ├── CustomCursor.tsx
+        │       ├── EducationCard.tsx
+        │       ├── ProjectCard.tsx
+        │       ├── SectionTitle.tsx
+        │       ├── ThemeToggle.tsx
+        │       ├── Timeline.tsx
+        │       └── TypeWriter.tsx
+        └── hooks/
+            ├── useAnimatedLogo.ts
+            ├── useBlogs.ts
+            ├── useLoading.ts
+            └── useTheme.ts
+
+---
+
 ## 🛠 Technologies Used
 
 - **React**: JavaScript library for building the user interface.
