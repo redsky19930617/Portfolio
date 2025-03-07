@@ -32,7 +32,8 @@ Check it out live at: [https://deepakmodi.vercel.app/](https://deepakmodi.vercel
 
 ---
 
-## 🚀 Directory Structure:
+## 📂 **Directory Structure**
+```
 └── decodewithdeepak-portfolio/
     ├── README.MD
     ├── LICENSE
@@ -93,6 +94,7 @@ Check it out live at: [https://deepakmodi.vercel.app/](https://deepakmodi.vercel
             ├── useBlogs.ts
             ├── useLoading.ts
             └── useTheme.ts
+```
 
 ---
 
@@ -127,6 +129,10 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 
 Feel free to reach out to me through any of the following channels:
 
-- **Email**: [deepakmodi867@gmail.com](mailto:deepakmodi867@gmail.com)
+- **Email**: [deepakmodi8676@gmail.com](mailto:deepakmodi8676@gmail.com)
 - **LinkedIn**: [linkedin.com/in/deepakmodi1](https://linkedin.com/in/deepakmodi1)
 - **Website**: [deepakmodi.vercel.app](https://deepakmodi.vercel.app)
+
+---
+
+### 🔥 Made with ❤️ by **Deepak Modi**
