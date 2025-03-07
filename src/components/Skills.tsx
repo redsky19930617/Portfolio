@@ -31,16 +31,22 @@ export function Skills() {
       <div className="container mx-auto px-8">
         <SectionTitle>Skills</SectionTitle>
         <div className="max-w-6xl mx-auto space-y-12">
-          {/* skills */}
           <div>
             <div className="flex flex-wrap gap-6 justify-center">
               {skills.map((tech) => (
                 <div
                   key={tech.name}
-                  className="flex flex-col items-center p-2 sm:p-4 sm:border border-gray-300 dark:border-gray-600 rounded-lg shadow-md hover:shadow-xl hover:bg-gray-200 dark:hover:bg-gray-800 transition-transform duration-300 transform hover:scale-110"
+                  className="relative flex flex-col items-center p-2 sm:p-4 
+                  bg-transparent sm:bg-white dark:sm:bg-gray-800 border-0 sm:border border-gray-200 dark:border-gray-700 
+                  rounded-xl shadow-none sm:shadow-md 
+                  transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-2xl 
+                  before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-br before:from-transparent 
+                  before:to-[var(--glow-color,rgba(255,255,255,0))] before:opacity-0 before:blur-lg 
+                  before:transition-all before:duration-500 hover:before:opacity-40"
+                  style={{ "--glow-color": tech.color } as React.CSSProperties}
                 >
-                  <tech.icon size={40} color={tech.color} />
-                  <span className="text-sm font-medium text-gray-800 dark:text-gray-200 mt-2">{tech.name}</span>
+                  <tech.icon size={40} color={tech.color} className="mb-3 transition-all duration-300" />
+                  <span className="text-sm font-medium text-gray-900 dark:text-gray-100">{tech.name}</span>
                 </div>
               ))}
             </div>
