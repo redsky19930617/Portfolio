@@ -49,7 +49,7 @@ export function useBlogs() {
         });
 
         const data = await response.json();
-        console.log("Hashnode API Response:", data); // Debugging Line
+        // console.log("Hashnode API Response:", data); // Debugging Line
 
         if (data?.data?.user?.publications?.edges?.length > 0) {
           // Extract posts from the first publication

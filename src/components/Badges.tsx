@@ -2,61 +2,69 @@ import React from "react";
 import { SectionTitle } from "./ui/SectionTitle";
 
 const badges = [
-    {
-      platform: "LeetCode",
-      title: "50 Days Badge 2024",
-      image: "https://assets.leetcode.com/static_assets/marketing/2024-50.gif",
-      profile: "https://leetcode.com/deepakmodi1/",
-    },
-    {
-      platform: "LeetCode",
-      title: "100 Days Badge 2024",
-      image: "https://assets.leetcode.com/static_assets/marketing/2024-100-new.gif",
-      profile: "https://leetcode.com/deepakmodi1/",
-    },
-  
-    {
-      platform: "GitHub",
-      title: "Pull Shark",
-      image: "https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png",
-      profile: "https://github.com/decodewithdeepak",
-    },
-    {
-      platform: "GitHub",
-      title: "Arctic Code Vault Contributor",
-      image: "https://github.githubassets.com/images/modules/profile/badge--acv-64.png",
-      profile: "https://github.com/decodewithdeepak",
-    },
-  
-    {
-      platform: "CodeChef",
-      title: "3-Star Coder",
-      image: "https://img.icons8.com/color/96/codechef.png",
-      profile: "https://www.codechef.com/users/deepakmodi",
-    },
+  {
+    id: "leetcode-50",
+    platform: "LeetCode",
+    title: "50 Days Badge 2024",
+    image: "https://assets.leetcode.com/static_assets/marketing/2024-50.gif",
+    profile: "https://leetcode.com/deepakmodi/",
+  },
+  {
+    id: "leetcode-100",
+    platform: "LeetCode",
+    title: "100 Days Badge 2024",
+    image: "https://assets.leetcode.com/static_assets/marketing/2024-100-new.gif",
+    profile: "https://leetcode.com/deepakmodi/",
+  },
 
-    {
-      platform: "CodeForces",
-      title: "Expert Rank",
-      image: "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/external-codeforces-programming-competitions-and-contests-programming-community-logo-shadow-tal-revivo.png",
-      profile: "https://codeforces.com/profile/deepakmodi",
-    },
-  
-    {
-      platform: "GeeksforGeeks",
-      title: "Top 10% Coder",
-      image: "https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg", 
-      profile: "https://auth.geeksforgeeks.org/user/deepakmodi/profile",
-    },
-  
-    {
-      platform: "HackerRank",
-      title: "Java Gold Badge",
-      image: "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/external-hackerrank-is-a-technology-company-that-focuses-on-competitive-programming-logo-shadow-tal-revivo.png",
-      profile: "https://www.hackerrank.com/deepakmodi",
-    },
-  ];
-  
+  {
+    id: "github-shark",
+    platform: "GitHub",
+    title: "Pull Shark",
+    image: "https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png",
+    profile: "https://github.com/decodewithdeepak",
+  },
+  {
+    id: "github-arctic",
+    platform: "GitHub",
+    title: "Arctic Code Vault Contributor",
+    image: "https://github.githubassets.com/images/modules/profile/badge--acv-64.png",
+    profile: "https://github.com/decodewithdeepak",
+  },
+
+  {
+    id: "codechef",
+    platform: "CodeChef",
+    title: "3-Star Coder",
+    image: "https://img.icons8.com/color/96/codechef.png",
+    profile: "https://www.codechef.com/users/deepakmodi",
+  },
+
+  {
+    id: "codeforces",
+    platform: "CodeForces",
+    title: "Expert Rank",
+    image: "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/external-codeforces-programming-competitions-and-contests-programming-community-logo-shadow-tal-revivo.png",
+    profile: "https://codeforces.com/profile/deepakmodi",
+  },
+
+  {
+    id: "gfg",
+    platform: "GeeksforGeeks",
+    title: "Top 10% Coder",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg",
+    profile: "https://auth.geeksforgeeks.org/user/deepakmodi/profile",
+  },
+
+  {
+    id: "hackerrank",
+    platform: "HackerRank",
+    title: "Java Gold Badge",
+    image: "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/external-hackerrank-is-a-technology-company-that-focuses-on-competitive-programming-logo-shadow-tal-revivo.png",
+    profile: "https://www.hackerrank.com/deepakmodi",
+  },
+];
+
 
 export function Badges() {
   return (
@@ -67,7 +75,7 @@ export function Badges() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 sm:gap-8 gap-4">
           {badges.map((badge) => (
             <a
-              key={badge.platform}
+              key={badge.id}
               href={badge.profile}
               target="_blank"
               rel="noopener noreferrer"
