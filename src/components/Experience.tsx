@@ -7,7 +7,7 @@ const experiences = [
     title: 'Full Stack Developer Intern',
     company: 'Cyberxield Solutions',
     period: 'Jan 2024 - Feb 2024',
-    description: 'Developing and maintaining web applications using MERN stack. Implemented key features that improved user engagement by 40%.',
+    description: 'Developed and maintained web applications using the MERN stack. Implemented key features that improved user engagement by 40%.',
   },
   {
     title: 'Web Development Lead',

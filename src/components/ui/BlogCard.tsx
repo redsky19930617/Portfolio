@@ -13,7 +13,7 @@ export function BlogCard({ title, brief, coverImage, slug }: BlogCardProps) {
       href={`https://deepakmodi.hashnode.dev/${slug}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="block overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-[1.03]"
+      className="block overflow-hidden rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 bg-white dark:bg-gray-900 hover:shadow-xl"
     >
       {/* Blog Cover Image */}
       {coverImage ? (
