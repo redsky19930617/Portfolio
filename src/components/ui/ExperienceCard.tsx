@@ -19,7 +19,7 @@ export function ExperienceCard({
   return (
     <div className="relative group pl-6 sm:pl-10">
       {/* Timeline Dot */}
-      <div className="absolute left-[-12px] sm:left-[-16px] top-2 w-6 h-6 sm:w-8 sm:h-8 bg-blue-600 dark:bg-blue-500 rounded-full border-4 border-white dark:border-gray-900"></div>
+      <div className="absolute left-[-16px] top-4 w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-full border-4 border-white dark:border-gray-900"></div>
 
       {/* Experience Card */}
       <div className="relative bg-gray-200 dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-xl">
