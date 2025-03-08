@@ -22,7 +22,7 @@ export function ExperienceCard({
       <div className="absolute left-[-16px] top-4 w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-full border-4 border-white dark:border-gray-900"></div>
 
       {/* Experience Card */}
-      <div className="relative bg-gray-200 dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-xl">
+      <div className="relative bg-gray-200 dark:bg-gray-800 p-4 sm:p-6 rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-xl">
         
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -35,8 +35,8 @@ export function ExperienceCard({
             </div>
             <div>
               <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">{company} • {period}
-              </p>
+              <p className="text-base text-blue-600 dark:text-blue-400">{company}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">{period}</p>
             </div>
           </div>
 
