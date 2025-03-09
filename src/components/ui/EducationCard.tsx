@@ -1,3 +1,4 @@
+import React from "react";
 import { GraduationCap, Calendar, Award } from "lucide-react";
 
 interface EducationCardProps {
