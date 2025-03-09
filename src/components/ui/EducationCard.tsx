@@ -1,39 +1,56 @@
-import React from 'react';
-import { GraduationCap } from 'lucide-react';
+import { GraduationCap, Calendar, Award } from "lucide-react";
 
 interface EducationCardProps {
   degree: string;
   institution: string;
   period: string;
   score: string;
+  isLast: boolean;
 }
 
-export function EducationCard({ degree, institution, period, score }: EducationCardProps) {
+export function EducationCard({ 
+  degree, 
+  institution, 
+  period, 
+  score, 
+  isLast 
+}: EducationCardProps) {
   return (
-    <div className="group relative bg-gray-200 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:-translate-y-1">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+    <div className="relative bg-gray-200 dark:bg-gray-800 p-4 sm:p-8 rounded-xl shadow-lg hover:shadow-xl border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400">
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-      {/* Content */}
-      <div className="relative z-10">
-        <div className="flex items-start gap-4 mb-4">
-          {/* Icon */}
-          <div className="p-3 bg-purple-100 dark:bg-purple-900 rounded-lg group-hover:scale-110 transition-transform duration-300">
-            <GraduationCap className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-          </div>
+      <div className="relative z-10 flex items-start gap-6">
+        {/* Cap Icon */}
+        <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg shadow">
+          <GraduationCap className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+        </div>
 
-          {/* Details */}
-          <div>
-            <h3 className="font-semibold mb-1">{degree}</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-2">{institution}</p>
-            <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
-              <span>{period}</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-gray-400" />
-              <span>Score: {score}</span>
+        {/* Details Section */}
+        <div className="flex-1">
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-100">{degree}</h3>
+          <p className="text-blue-600 dark:text-blue-400 font-medium">{institution}</p>
+
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-3">
+            {/* Period */}
+            <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+              <Calendar className="w-4 h-4" />
+              <span className="text-sm">{period}</span>
+            </div>
+
+            {/* Score */}
+            <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+              <Award className="w-4 h-4" />
+              <span className="text-sm">Score: {score}</span>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Timeline Connector (Hidden for Last Card) */}
+      {!isLast && (
+        <div className="absolute left-10 bottom-0 w-1 h-10 bg-blue-300 dark:bg-blue-700 transform translate-y-full" />
+      )}
     </div>
   );
 }

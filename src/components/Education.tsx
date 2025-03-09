@@ -17,7 +17,7 @@ const education = [
   },
   {
     degree: 'Secondary (X)',
-    institution: 'St. Paul\'s School, Hazaribagh',
+    institution: "St. Paul's School, Hazaribagh",
     period: '2017 - 2019',
     score: '85.6%',
   },
@@ -28,9 +28,9 @@ export function Education() {
     <section id="education" className="py-20">
       <div className="container mx-auto px-8">
         <SectionTitle>Education</SectionTitle>
-        <div className="max-w-4xl mx-auto space-y-6">
-          {education.map((edu) => (
-            <EducationCard key={edu.degree} {...edu} />
+        <div className="max-w-5xl mx-auto space-y-10">
+          {education.map((edu, index) => (
+            <EducationCard key={edu.degree} {...edu} isLast={index === education.length - 1} />
           ))}
         </div>
       </div>
