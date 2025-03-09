@@ -53,12 +53,12 @@ export function About() {
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.06]" />
       </div>
 
-      <div className="container mx-auto px-8 relative">
+      <div className="container mx-auto px-6 relative">
         <SectionTitle>About Me</SectionTitle>
 
         {/* Introduction */}
         <div className="max-w-5xl mx-auto mb-16 text-center">
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             Hey there! 👋 I'm <span className="text-blue-600 font-semibold">Deepak Modi</span>,
             a Full-Stack Developer and final-year Computer Science Engineering student.
             I love transforming ideas into scalable web applications and solving complex coding challenges. 
@@ -88,7 +88,7 @@ export function About() {
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">{title}</h3>
                 </div>
-                <ul className="list-disc pl-6 text-gray-600 dark:text-gray-300 space-y-1">
+                <ul className="text-sm sm:text-base list-disc pl-6 text-gray-600 dark:text-gray-300 space-y-1">
                   {description.map((point, index) => (
                     <li key={index}>{point}</li>
                   ))}
