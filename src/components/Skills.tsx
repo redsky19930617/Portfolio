@@ -2,7 +2,6 @@ import React from "react";
 import { SectionTitle } from "./ui/SectionTitle";
 import { SkillCard } from "./ui/SkillCard";
 import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiRedux, SiExpress, SiGraphql, SiMongodb, SiPrisma, SiCplusplus, SiGit, SiGithub, SiPostman, SiVite, SiVercel } from "react-icons/si";
-
 import { FaNodeJs, FaPython, FaJava, FaAws } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 import { IoLogoFirebase } from "react-icons/io5";
