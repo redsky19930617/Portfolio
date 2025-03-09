@@ -25,7 +25,7 @@ const certifications = [
     issuer: "Physics Wallah",
     date: "Mar 2024",
     link: "https://pwskills.com/learn/certificate/1e3f9e1e-9108-4685-bfa0-6325856f3823/",
-    image: "https://media.licdn.com/dms/image/v2/D5622AQF8LaQ8mkTHDg/feedshare-shrink_800/feedshare-shrink_800/0/1710078484144?e=1740614400&v=beta&t=owk4SA8ntA4zY__YlZJE_GymoqVnfTIODTQrAGDH9Ok",
+    image: "https://i.ibb.co/gMvXCmVQ/1e3f9e1e-9108-4685-bfa0-6325856f3823-1.png",
   },
   {
     title: "JAVA Course - Mastering the Fundamentals",
