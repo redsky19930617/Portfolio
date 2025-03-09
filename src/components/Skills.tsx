@@ -51,7 +51,7 @@ export function Skills() {
         <SectionTitle>Skills</SectionTitle>
 
         {/* Flexbox for responsive grid alignment */}
-        <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-3 sm:gap-6 mt-8">
+        <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-4 sm:gap-6 mt-8">
           {skills.map((tech, index) => (
             <SkillCard key={index} name={tech.name} icon={tech.icon} color={tech.color} url={tech.url} />
           ))}
