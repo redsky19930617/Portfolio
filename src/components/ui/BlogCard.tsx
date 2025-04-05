@@ -13,23 +13,25 @@ export function BlogCard({ title, brief, coverImage, slug }: BlogCardProps) {
       href={`https://deepakmodi.hashnode.dev/${slug}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="block overflow-hidden rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 bg-white dark:bg-gray-900 hover:shadow-xl"
+      className="group block overflow-hidden rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 bg-white dark:bg-gray-900 hover:shadow-xl transition-all"
     >
       {/* Blog Cover Image */}
-      {coverImage ? (
-        <img
-          src={coverImage}
-          alt={title}
-          className="w-full h-48 object-cover rounded-t-xl"
-        />
-      ) : (
-        <div className="w-full h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center rounded-t-xl">
-          <span className="text-gray-500 dark:text-gray-400 text-sm">No Image Available</span>
-        </div>
-      )}
+      <div className="p-3 pt-4 pb-0 overflow-hidden rounded-lg">
+        {coverImage ? (
+          <img
+            src={coverImage}
+            alt={title}
+            className="w-full h-48 object-cover rounded-lg transform transition-transform duration-300 ease-in-out group-hover:scale-105"
+          />
+        ) : (
+          <div className="w-full h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center rounded-lg">
+            <span className="text-gray-500 dark:text-gray-400 text-sm">No Image Available</span>
+          </div>
+        )}
+      </div>
 
       {/* Blog Content */}
-      <div className="p-5">
+      <div className="p-5 pt-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white line-clamp-2">
           {title}
         </h3>

@@ -22,7 +22,7 @@ export function useBlogs() {
             publications(first: 1) {
               edges {
                 node {
-                  posts(first: 3) {
+                  posts(first: 6) {
                     edges {
                       node {
                         title
