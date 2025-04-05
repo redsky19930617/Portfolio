@@ -25,12 +25,15 @@ export function ProjectCard({ title, description, image, link, github, techStack
 
         {/* Image */}
         <div className="relative overflow-hidden p-4 pb-0">
+        <a href={link} target="_blank" rel="noopener noreferrer">
           <img
             src={image}
             alt={`Screenshot of ${title}`}
             className="w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
           />
+        </a>
         </div>
+
 
         {/* Content */}
         <div className="p-6">
