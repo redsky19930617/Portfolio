@@ -2,15 +2,11 @@ import React, { useEffect, useState } from "react";
 
 export function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [showCursor, setShowCursor] = useState(false);
 
   useEffect(() => {
-    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-      setIsTouchDevice(true);
-      return;
-    }
-
     const handleMouseMove = (e: MouseEvent) => {
+      setShowCursor(true);
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
@@ -21,21 +17,19 @@ export function CustomCursor() {
     };
   }, []);
 
-  if (isTouchDevice) {
-    return null;
-  }
+  if (!showCursor) return null;
 
   return (
     <>
       {/* Outer Ring */}
       <div
-        className={`fixed top-0 left-0 w-16 h-16 border-2 border-blue-500 rounded-full pointer-events-none transition-all duration-300 mix-blend-difference ease-out z-50`}
+        className="fixed top-0 left-0 w-16 h-16 border-2 border-blue-500 rounded-full pointer-events-none transition-all duration-150 mix-blend-difference ease-out z-50"
         style={{ transform: `translate(${position.x - 32}px, ${position.y - 32}px)` }}
       />
 
-      {/* Inner Cursor */}
+      {/* Inner Dot */}
       <div
-        className={`fixed w-8 h-8 bg-blue-500 rounded-full pointer-events-none transition-all duration-300 mix-blend-difference ease-out z-50`}
+        className="fixed w-8 h-8 bg-blue-500 rounded-full pointer-events-none transition-all duration-150 mix-blend-difference ease-out z-50"
         style={{ transform: `translate(${position.x - 16}px, ${position.y - 16}px)` }}
       />
     </>
