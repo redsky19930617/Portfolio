@@ -16,6 +16,7 @@ import { Footer } from './components/Footer';
 import { LoadingScreen } from './components/loading/LoadingScreen';
 import { useLoading } from './hooks/useLoading';
 import { CustomCursor } from "./components/ui/CustomCursor";
+import { ScrollToTop } from "./components/ui/ScrollToTop";
 import { Analytics } from '@vercel/analytics/react';
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
         <Education />
         <Contact />
         <Footer />
+        <ScrollToTop />
         <Analytics />
       </div>
     </>
