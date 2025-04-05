@@ -1,28 +1,118 @@
 import React from 'react';
 import { SectionTitle } from './ui/SectionTitle';
 import { ProjectCard } from './ui/ProjectCard';
+import {
+  SiReact,
+  SiNodedotjs,
+  SiFirebase,
+  SiTailwindcss,
+  SiTypescript,
+  SiNextdotjs,
+  SiMongodb,
+  SiPrisma,
+  SiShadcnui,
+  SiFramer,
+  SiSocketdotio,
+  SiStripe,
+} from 'react-icons/si';
+
+// Define reusable tech stack icons & colors
+const techStacks = {
+  react: { icon: SiReact, color: '#00cfff' },
+  node: { icon: SiNodedotjs, color: '#228b22' },
+  firebase: { icon: SiFirebase, color: '#fbbf00' },
+  tailwind: { icon: SiTailwindcss, color: '#06b6d4' },
+  typescript: { icon: SiTypescript, color: '#1f6feb' },
+  next: { icon: SiNextdotjs, color: '#' },
+  mongodb: { icon: SiMongodb, color: '#10b981' },
+  prisma: { icon: SiPrisma, color: '#' }, 
+  shadcn: { icon: SiShadcnui, color: '#6366f1' },
+  framer: { icon: SiFramer, color: '#2563eb' },
+  socket: { icon: SiSocketdotio, color: '#' },
+  stripe: { icon: SiStripe, color: '#5b4df1' },
+};
+
 
 const projects = [
   {
     title: 'NotesNeo',
-    description: 'A comprehensive semester notes platform for students',
+    description: 'A notes sharing platform for university students with subject-wise notes, authentication, and personalised user dashboard to manage uploaded content.',
     image: '/assets/notesneo.png',
     link: 'https://notesneo.vercel.app',
-    tags: ['React', 'Node.js', 'MongoDB'],
+    github: 'https://github.com/decodewithdeepak/notesneo',
+    techStack: [
+      techStacks.react,
+      techStacks.tailwind,
+      techStacks.typescript,
+      techStacks.firebase,
+    ],
   },
   {
     title: 'NeoCode',
-    description: 'DSA sheet management and tracking platform',
+    description: 'A coding platform with curated DSA sheets, roadmaps, CS articles, and an integrated compiler to help students practice and learn better.',
     image: '/assets/neocode.png',
     link: 'https://neocoding.vercel.app',
-    tags: ['TypeScript', 'Next.js', 'PostgreSQL'],
+    github: 'https://github.com/decodewithdeepak/neocode',
+    techStack: [
+      techStacks.react,
+      techStacks.tailwind,
+      techStacks.typescript,
+      techStacks.mongodb,
+      techStacks.prisma,
+    ],
   },
   {
     title: 'Portfolio',
-    description: 'Personal portfolio website showcasing projects and skills',
+    description: 'A personal portfolio website showcasing projects, skills, blogs, and contact section with responsive design and modern UI/UX styling.',
     image: '/assets/portfolio.png',
-    link: 'https://deepakmodi.netlify.app',
-    tags: ['React', 'Tailwind CSS', 'TypeScript'],
+    link: 'https://neocoding.vercel.app',
+    github: 'https://github.com/decodewithdeepak/portfolio',
+    techStack: [
+      techStacks.next,
+      techStacks.react,
+      techStacks.typescript,
+      techStacks.tailwind,
+      techStacks.framer,
+    ],
+  },
+  {
+    title: 'NeoCompiler',
+    description: 'An online compiler supporting multiple languages with auth, themes, and AI-assisted suggestions. Part of the NeoCode ecosystem.',
+    image: '/assets/codecompiler.png',
+    github: 'https://github.com/decodewithdeepak/codecompiler',
+    techStack: [
+      techStacks.next,
+      techStacks.typescript,
+      techStacks.tailwind,
+      techStacks.mongodb,
+      techStacks.prisma,
+      techStacks.shadcn,
+    ],
+  },
+  {
+    title: 'NeoChat',
+    description: 'A real-time chat application using WebSockets, supporting private and group messaging, typing indicators, and clean UI for all devices.',
+    image: '/assets/neochat.png',
+    github: 'https://github.com/decodewithdeepak/neochat',
+    techStack: [
+      techStacks.next,
+      techStacks.typescript,
+      techStacks.tailwind,
+      techStacks.socket,
+      techStacks.mongodb,
+    ],
+  },
+  {
+    title: 'Ajay Sharma',
+    description: 'A freelance project built for Ajay Sharma, a self-empowerment coach. Designed landing page, pricing section, and integrated payments.',
+    image: '/assets/ajaysharma.png',
+    link: 'https://ajay-sharma.vercel.app',
+    techStack: [
+      techStacks.react,
+      techStacks.typescript,
+      techStacks.tailwind,
+      techStacks.stripe,
+    ],
   },
 ];
 
@@ -31,7 +121,7 @@ export function Projects() {
     <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-8">
         <SectionTitle>Projects</SectionTitle>
-        
+
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
