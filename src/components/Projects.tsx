@@ -18,21 +18,21 @@ import {
 
 // Define reusable tech stack icons & colors
 const techStacks = {
-  react: { icon: SiReact, color: '#00cfff' },
-  node: { icon: SiNodedotjs, color: '#228b22' },
-  firebase: { icon: SiFirebase, color: '#fbbf00' },
-  tailwind: { icon: SiTailwindcss, color: '#06b6d4' },
-  typescript: { icon: SiTypescript, color: '#1f6feb' },
-  next: { icon: SiNextdotjs, color: '#' },
-  mongodb: { icon: SiMongodb, color: '#10b981' },
-  prisma: { icon: SiPrisma, color: '#' }, 
-  shadcn: { icon: SiShadcnui, color: '#6366f1' },
-  framer: { icon: SiFramer, color: '#2563eb' },
-  socket: { icon: SiSocketdotio, color: '#' },
-  stripe: { icon: SiStripe, color: '#5b4df1' },
+  react: { icon: SiReact, name: "React", color: '#00cfff' },
+  node: { icon: SiNodedotjs, name: "Node.js", color: '#228b22' },
+  firebase: { icon: SiFirebase, name: "Firebase", color: '#fbbf00' },
+  tailwind: { icon: SiTailwindcss, name: "Tailwind CSS", color: '#06b6d4' },
+  typescript: { icon: SiTypescript, name: "TypeScript", color: '#1f6feb' },
+  next: { icon: SiNextdotjs, name: "Next.js", color: '#' },
+  mongodb: { icon: SiMongodb, name: "MongoDB", color: '#10b981' },
+  prisma: { icon: SiPrisma, name: "Prisma", color: '#186997' },
+  shadcn: { icon: SiShadcnui, name: "ShadCN", color: '#6366f1' },
+  framer: { icon: SiFramer, name: "Framer Motion", color: '#2563eb' },
+  socket: { icon: SiSocketdotio, name: "Socket.io", color: '#' },
+  stripe: { icon: SiStripe, name: "Stripe", color: '#5b4df1' },
 };
 
-
+// Define projects data
 const projects = [
   {
     title: 'NotesNeo',

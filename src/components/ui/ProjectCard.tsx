@@ -3,19 +3,26 @@ import { SiGithub } from "react-icons/si";
 import { FaGlobe } from "react-icons/fa";
 import { IconType } from 'react-icons';
 
+interface TechStackItem {
+  icon: IconType;
+  name: string;
+  color?: string;
+}
+
 interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
   link?: string;
   github?: string;
-  techStack: { icon: IconType; color?: string }[];
+  techStack: TechStackItem[];
 }
 
 export function ProjectCard({ title, description, image, link, github, techStack }: ProjectCardProps) {
   return (
     <div className="group relative">
       <div className="relative bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 rounded-xl shadow-lg overflow-hidden hover:shadow-xl">
+
         {/* Image */}
         <div className="relative overflow-hidden p-4 pb-0">
           <img
@@ -59,17 +66,25 @@ export function ProjectCard({ title, description, image, link, github, techStack
             {description}
           </p>
 
-          {/* Tech Stack Icons */}
+          {/* Tech Stack Icons with Tooltip */}
           <div className="flex flex-wrap gap-3 mt-4">
             {techStack.map((item, index) => {
               const Icon = item.icon;
               return (
-                <div key={index} className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800">
-                  <Icon className="w-6 h-6" color={item.color} />
+                <div key={index} className="relative">
+                  <div className="peer p-2 rounded-lg bg-gray-200 dark:bg-gray-800">
+                    <Icon className="w-6 h-6" color={item.color} />
+                  </div>
+                  {/* Tooltip */}
+                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs rounded px-2 py-1 
+                        opacity-0 peer-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
+                    {item.name}
+                  </div>
                 </div>
               );
             })}
           </div>
+
         </div>
       </div>
     </div>
