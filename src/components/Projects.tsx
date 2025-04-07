@@ -79,7 +79,8 @@ const projects = [
     title: 'NeoCompiler',
     description: 'An online compiler supporting multiple languages with auth, themes, and AI-assisted suggestions. Part of the NeoCode ecosystem.',
     image: '/assets/codecompiler.webp',
-    github: 'https://github.com/decodewithdeepak/codecompiler',
+    link: 'https://neocompiler.vercel.app',
+    github: 'https://github.com/decodewithdeepak/neo-compiler',
     techStack: [
       techStacks.next,
       techStacks.typescript,
