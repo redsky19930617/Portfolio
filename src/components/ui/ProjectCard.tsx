@@ -21,7 +21,7 @@ interface ProjectCardProps {
 export function ProjectCard({ title, description, image, link, github, techStack }: ProjectCardProps) {
   return (
     <div className="group relative">
-      <div className="relative bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 rounded-xl shadow-lg overflow-hidden hover:shadow-xl">
+      <div className="relative bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl">
 
         {/* Image */}
         <div className="relative overflow-hidden p-4 pb-0">
