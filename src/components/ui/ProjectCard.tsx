@@ -21,19 +21,18 @@ interface ProjectCardProps {
 export function ProjectCard({ title, description, image, link, github, techStack }: ProjectCardProps) {
   return (
     <div className="group relative">
-      <div className="relative bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl">
+      <div className="relative bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 rounded-2xl shadow-lg overflow-hidden transition duration-300 hover:shadow-blue-500/10">
 
         {/* Image */}
         <div className="relative overflow-hidden p-4 pb-0">
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          <img
-            src={image}
-            alt={`Screenshot of ${title}`}
-            className="w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
-          />
-        </a>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <img
+              src={image}
+              alt={`Screenshot of ${title}`}
+              className="w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+            />
+          </a>
         </div>
-
 
         {/* Content */}
         <div className="p-6">
@@ -93,3 +92,4 @@ export function ProjectCard({ title, description, image, link, github, techStack
     </div>
   );
 }
+
