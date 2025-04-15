@@ -64,13 +64,16 @@ export function Footer() {
               Built with <FaReact className="w-6 h-6 text-blue-500 animate-spin" /> using
               <SiVite className="w-6 h-6 text-yellow-500 animate-pulse" />
             </p>
-
           </div>
 
-          {/* Counter */}
+          {/* Views Counter */}
           <div className="flex justify-center">
-            <a href="https://hits.sh/deepakmodi.vercel.app" target="_blank" rel="noopener noreferrer">
-              <img src="https://hits.sh/deepakmodi.vercel.app.svg?label=Views&color=2a6acf&labelColor=1f2937" alt="Views" />
+            <a href="https://hits.sh/deepakmodi.tech/" target="_blank" rel="noopener noreferrer">
+              <img 
+                src="https://hits.sh/deepakmodi.tech.svg?style=for-the-badge&label=Views&color=2a6acf&labelColor=1f2937" 
+                alt="Views" 
+                className="rounded-lg"
+              />
             </a>
           </div>
 
