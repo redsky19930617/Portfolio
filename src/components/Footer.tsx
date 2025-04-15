@@ -66,6 +66,14 @@ export function Footer() {
             </p>
 
           </div>
+
+          {/* Counter */}
+          <div className="flex justify-center">
+            <a href="https://hits.sh/deepakmodi.vercel.app" target="_blank" rel="noopener noreferrer">
+              <img src="https://hits.sh/deepakmodi.vercel.app.svg?label=Views&color=2a6acf&labelColor=1f2937" alt="Views" />
+            </a>
+          </div>
+
         </div>
       </div>
     </footer>
