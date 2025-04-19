@@ -14,6 +14,7 @@ import {
   SiFramer,
   SiSocketdotio,
   SiStripe,
+  SiAppwrite,
 } from 'react-icons/si';
 
 // Define reusable tech stack icons & colors
@@ -30,6 +31,7 @@ const techStacks = {
   framer: { icon: SiFramer, name: "Framer Motion", color: '#2563eb' },
   socket: { icon: SiSocketdotio, name: "Socket.io", color: '#' },
   stripe: { icon: SiStripe, name: "Stripe", color: '#5b4df1' },
+  appwrite: { icon: SiAppwrite, name: "Appwrite", color: '#ff3d00' },
 };
 
 // Define projects data
@@ -72,6 +74,48 @@ const projects = [
       techStacks.react,
       techStacks.typescript,
       techStacks.tailwind,
+      techStacks.framer,
+    ],
+  },
+  {
+    title: 'NeoLearn',
+    description: 'An online AI learning platform with courses, quizzes, and user authentication. Users can track progress and manage their learning journey.',
+    image: '/assets/neolearn.webp',
+    link: 'https://neolearn.vercel.app',
+    github: 'https://github.com/decodewithdeepak/neolearn',
+    techStack: [
+      techStacks.react,
+      techStacks.typescript,
+      techStacks.tailwind,
+      techStacks.appwrite,
+      techStacks.framer,
+    ],
+  },
+  {
+    title: 'NeoInvest',
+    description: 'An AI-powered investment platform that helps beginners understand and plan their investments based on risk, capital, age, and financial goals.',
+    image: '/assets/neoinvest.webp',
+    link: 'https://investneo.vercel.app',
+    github: 'https://github.com/decodewithdeepak/neoinvest',
+    techStack: [
+      techStacks.react,
+      techStacks.typescript,
+      techStacks.tailwind,
+      techStacks.framer,
+      techStacks.appwrite,
+    ],
+  },
+  {
+    title: 'NeoFolio',
+    description: 'A portfolio website template for developers, showcasing projects and skills. Built with modern web technologies for easy customization.',
+    image: '/assets/neofolio.webp',
+    link: 'https://neofolio.vercel.app',
+    github: 'https://github.com/decodewithdeepak/neofolio',
+    techStack: [
+      techStacks.react,
+      techStacks.typescript,
+      techStacks.tailwind,
+      techStacks.firebase,
       techStacks.framer,
     ],
   },
