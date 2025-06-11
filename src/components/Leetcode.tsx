@@ -1,5 +1,6 @@
 import React from 'react';
 import { SectionTitle } from './ui/SectionTitle';
+import { SiLeetcode } from "react-icons/si";
 
 export function Leetcode() {
   return (
@@ -10,11 +11,11 @@ export function Leetcode() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Leetcode Activity Image */}
           <div className="relative w-full h-[25rem] overflow-hidden">
-            <iframe
+            <img
               src="https://leetcard.jacoblin.cool/deepakmodi1?theme=dark&font=Inter&ext=activity&border=2&radius=10"
               title="Leetcode Activity"
-              className="absolute w-full h-full shadow-md"
-            ></iframe>
+              className="absolute w-full h-full rounded-xl shadow-md"
+            ></img>
           </div>
           
           {/* Leetcode Journey Text */}
@@ -34,6 +35,18 @@ export function Leetcode() {
               is to keep improving and stay consistent in learning and solving
               new problems daily.
             </p>
+            
+            {/* LeetCode Profile Button */}
+            <div className="mt-6 flex justify-center">
+              <a
+                href="https://leetcode.com/deepakmodi1/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 hover:scale-105 transition-all"
+              >
+                <SiLeetcode className="w-5 h-5" /> View Profile
+              </a>
+            </div>
           </div>
         </div>
       </div>
