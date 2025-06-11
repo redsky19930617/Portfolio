@@ -29,7 +29,7 @@ export function Navbar() {
           setActiveSection(visibleSection.target.id);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 } // Adjust threshold as needed
     );
 
     sections.forEach((section) => observer.observe(section));
