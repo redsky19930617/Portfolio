@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { SectionTitle } from "./ui/SectionTitle";
+import { SectionBackground } from "./ui/SectionBackground";
 import { CertificationCard } from "./ui/CertificationCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -46,17 +47,17 @@ export function Certifications() {
     autoplay: true,
     autoplaySpeed: 1500,
     pauseOnHover: true,
-    
+
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 768, settings: { slidesToShow: 1 } },
     ],
   };
 
-  return (
-    <section id="certifications" className="py-20 bg-gray-50 dark:bg-gray-800">
+  return (<SectionBackground>
+    <section id="certifications">
       <div className="container mx-auto px-8">
-        <SectionTitle>Certifications</SectionTitle>
+        <SectionTitle subtitle="Credentials that back up the skills I apply in real-world scenarios.">Certifications</SectionTitle>
         <Slider {...settings} className="max-w-6xl mx-auto">
           {certifications.map((cert) => (
             <div key={cert.title} className="px-4">
@@ -66,5 +67,6 @@ export function Certifications() {
         </Slider>
       </div>
     </section>
+  </SectionBackground>
   );
 }

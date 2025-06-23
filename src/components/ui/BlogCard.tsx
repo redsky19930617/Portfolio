@@ -1,5 +1,3 @@
-import React from "react";
-
 interface BlogCardProps {
   title: string;
   brief: string;
@@ -24,7 +22,7 @@ export function BlogCard({ title, brief, coverImage, slug }: BlogCardProps) {
             className="w-full h-48 object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
           />
         ) : (
-          <div className="w-full h-48 bg-gray-200 dark:bg-gray-800 flex items-center justify-center rounded-lg">
+          <div className="w-full h-48 bg-white dark:bg-gray-900 flex items-center justify-center rounded-lg">
             <span className="text-gray-500 dark:text-gray-400 text-sm">No Image Available</span>
           </div>
         )}

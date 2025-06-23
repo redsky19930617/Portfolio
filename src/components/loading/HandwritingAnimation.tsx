@@ -10,7 +10,7 @@ export function HandwritingAnimation() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.2, ease: "easeInOut" }}
-      className="w-full h-screen flex items-center justify-center bg-white dark:bg-gray-900"
+      className="w-full h-screen flex items-center justify-center bg-white dark:bg-gray-950"
     >
       <svg
         viewBox="0 0 1158.6 200.001"

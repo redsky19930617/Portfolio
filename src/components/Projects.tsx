@@ -1,5 +1,5 @@
-import React from 'react';
 import { SectionTitle } from './ui/SectionTitle';
+import { SectionBackground } from './ui/SectionBackground';
 import { ProjectCard } from './ui/ProjectCard';
 import {
   SiReact,
@@ -106,7 +106,7 @@ const projects = [
       techStacks.framer,
     ],
   },
-    {
+  {
     title: 'Placify',
     description: 'A campus placement platform connecting students with recruiters. Features job listings, company profiles, and application tracking.',
     image: '/assets/placify.webp',
@@ -119,7 +119,7 @@ const projects = [
       techStacks.prisma,
     ],
   },
-    {
+  {
     title: 'NeoFolio',
     description: 'A portfolio website template for developers, showcasing projects and skills. Built with modern web technologies for easy customization.',
     image: '/assets/neofolio.webp',
@@ -162,17 +162,19 @@ const projects = [
 ];
 
 export function Projects() {
-  return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
+  return (<SectionBackground>
+    <section id="projects">
       <div className="container mx-auto px-8">
-        <SectionTitle>Projects</SectionTitle>
+        <SectionTitle subtitle="Every project, a product. Every product, a solution with a story.">Projects</SectionTitle>
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
         </div>
+        
       </div>
     </section>
+  </SectionBackground>
   );
 }

@@ -22,7 +22,7 @@ export function Hero() {
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
       {/* Animated background with particles */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800">
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-slate-100/60 to-blue-50/60 dark:from-black dark:via-gray-950/60 dark:to-slate-950/60">
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.08]" />
         {/* Animated gradient orbs */}
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/30 dark:bg-blue-600/30 rounded-full blur-3xl animate-pulse" />
@@ -35,7 +35,7 @@ export function Hero() {
           <div className="flex flex-col items-center justify-center text-center space-y-4 order-2 md:order-1">
             <div className="space-y-2">
               <div className="inline-block bg-blue-100 dark:bg-blue-900/50 backdrop-blur-sm text-blue-600 dark:text-blue-300 text-sm font-medium px-4 py-2 rounded-full">
-              Hey! <span className="inline-block origin-[70%_70%] animate-wave">👋</span> I'm
+                Hey! <span className="inline-block origin-[70%_70%] animate-wave">👋</span> I'm
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient">
                 Deepak Modi

@@ -19,13 +19,13 @@ export function ExperienceCard({
   return (
     <div className="relative group pl-6 sm:pl-10">
       {/* Timeline Dot */}
-      <div className="absolute left-[-16px] top-4 w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-full border-4 border-white dark:border-gray-900"></div>
+      <div className="absolute left-[-16px] top-4 w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-full border-4 border-gray-200 dark:border-gray-800"></div>
 
       {/* Experience Card */}
-      <div className="relative bg-gray-200 dark:bg-gray-800 p-4 sm:p-6 rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-xl">
-        
+      <div className="relative bg-white dark:bg-gray-900 p-4 sm:p-6 rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-xl">
+
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-blue-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
         <div className="relative z-10">
           {/* Header */}
@@ -44,7 +44,7 @@ export function ExperienceCard({
           <ul className="mt-3 space-y-2 text-gray-700 dark:text-gray-300">
             {description.split("\n").map((line, index) => (
               <li key={index} className="flex items-start gap-2">
-                <span className="text-blue-600 dark:text-blue-400 font-bold">•</span> 
+                <span className="text-blue-600 dark:text-blue-400 font-bold">•</span>
                 <span>{line}</span>
               </li>
             ))}

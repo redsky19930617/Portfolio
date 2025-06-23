@@ -39,10 +39,8 @@ export function Footer() {
   ];
 
   return (
-    <footer className="relative bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5" />
-
+    <footer className="relative bg-gradient-to-br from-gray-50 via-slate-100/80 to-blue-50/60 dark:from-black dark:via-gray-950/80 dark:to-slate-950/60 border-t border-gray-200 dark:border-gray-800">
+      
       <div className="container mx-auto px-6 py-8 relative">
         <div className="flex flex-col items-center gap-6">
           {/* Navigation Links */}
@@ -69,9 +67,9 @@ export function Footer() {
           {/* Views Counter */}
           <div className="flex justify-center">
             <a href="https://hits.sh/deepakmodi.tech/" target="_blank" rel="noopener noreferrer">
-              <img 
-                src="https://hits.sh/deepakmodi.tech.svg?style=for-the-badge&label=Views&color=2a6acf&labelColor=1f2937" 
-                alt="Views" 
+              <img
+                src="https://hits.sh/deepakmodi.tech.svg?style=for-the-badge&label=Views&color=2a6acf&labelColor=1f2937"
+                alt="Views"
                 className="rounded-lg"
               />
             </a>

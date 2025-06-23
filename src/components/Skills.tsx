@@ -1,5 +1,5 @@
-import React from "react";
 import { SectionTitle } from "./ui/SectionTitle";
+import { SectionBackground } from "./ui/SectionBackground";
 import { SkillCard } from "./ui/SkillCard";
 import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiRedux, SiExpress, SiGraphql, SiMongodb, SiPrisma, SiCplusplus, SiGit, SiGithub, SiPostman, SiVite, SiVercel } from "react-icons/si";
 import { FaNodeJs, FaPython, FaJava, FaAws } from "react-icons/fa";
@@ -35,16 +35,19 @@ const skills = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-20">
-      <div className="container mx-auto px-6">
-        <SectionTitle>Skills</SectionTitle>
+    <SectionBackground>
+      <section id="skills">
+        <div className="container mx-auto px-6">
+          <SectionTitle subtitle="A modern tech stack designed for impact, efficiency, and scale.">Skills</SectionTitle>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4 sm:gap-6 mt-8">
-          {skills.map((tech) => (
-            <SkillCard key={tech.name} name={tech.name} icon={tech.icon} color={tech.color} url={tech.url} />
-          ))}
+          <div className="max-w-6xl mx-auto grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4 sm:gap-6">
+            {skills.map((tech) => (
+              <SkillCard key={tech.name} name={tech.name} icon={tech.icon} color={tech.color} url={tech.url} />
+            ))}
+          </div>
+
         </div>
-      </div>
-    </section>
+      </section>
+    </SectionBackground>
   );
 }
