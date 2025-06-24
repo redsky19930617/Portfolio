@@ -19,10 +19,8 @@ export function EducationCard({
   return (
     <div className="relative group bg-white dark:bg-gray-900 p-4 sm:p-8 rounded-xl shadow-lg hover:shadow-xl border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400">
       
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-blue-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
       <div className="relative z-10 flex items-start gap-6">
+        
         {/* Cap Icon */}
         <div className="p-3 sm:p-4 bg-blue-100 dark:bg-blue-900 rounded-lg">
           <GraduationCap className="w-6 h-6 text-blue-600 dark:text-blue-400" />
