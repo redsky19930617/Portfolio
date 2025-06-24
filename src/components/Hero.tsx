@@ -72,7 +72,7 @@ export function Hero() {
         <div className="absolute bottom-[-1rem] left-1/2 -translate-x-1/2 animate-bounce">
           <Link
             href="#about"
-            className="p-2 rounded-full bg-white/10 dark:bg-gray-800/10 hover:bg-white/20 dark:hover:bg-gray-800/20 transition-colors"
+            className="p-2"
           >
             <ArrowDown className="w-6 h-6 text-gray-600 dark:text-gray-300" />
           </Link>
