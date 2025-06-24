@@ -26,9 +26,10 @@ export function CustomCursor() {
 
   return (
     <>
+    
       {/* Blob Effect */}
       <div
-        className="fixed pointer-events-none opacity-25 dark:opacity-30 transition-all duration-300 ease-out z-10"
+        className="fixed pointer-events-none opacity-30 dark:opacity-30 transition-all duration-300 ease-out z-10"
         style={{
           left: position.x - 300,
           top: position.y - 300,
@@ -40,17 +41,19 @@ export function CustomCursor() {
           transform: 'scale(1.2)',
         }}
       />
-      
+
       {/* Outer Ring */}
       <div
         className="fixed top-0 left-0 w-16 h-16 border-2 border-blue-600 rounded-full pointer-events-none transition-all duration-150 mix-blend-difference ease-out z-50"
         style={{ transform: `translate(${position.x - 32}px, ${position.y - 32}px)` }}
       />
+
       {/* Inner Dot */}
       <div
         className="fixed w-8 h-8 bg-blue-600 rounded-full pointer-events-none transition-all duration-150 mix-blend-difference ease-out z-50"
         style={{ transform: `translate(${position.x - 16}px, ${position.y - 16}px)` }}
       />
+
     </>
   );
 }
