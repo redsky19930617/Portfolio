@@ -57,7 +57,7 @@ export function Certifications() {
   return (<SectionBackground>
     <section id="certifications">
       <div className="container mx-auto px-8">
-        <SectionTitle subtitle="Credentials that back up the skills I apply in real-world scenarios.">Certifications</SectionTitle>
+        <SectionTitle subtitle="Some courses I actually completed instead of just bookmarking them - fancy certificates!">Certifications</SectionTitle>
         <Slider {...settings} className="max-w-6xl mx-auto">
           {certifications.map((cert) => (
             <div key={cert.title} className="px-4">

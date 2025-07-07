@@ -8,9 +8,9 @@ const aboutSections = [
     icon: User2,
     title: "Who I Am",
     description: [
-      "A full-stack developer having interest in software engineering.",
-      "Enjoy solving problems and building scalable applications.",
-      "Always learning new technologies to improve my skills.",
+      "A guy who fell in love with code and can't stop building stuff.",
+      "I get excited when I solve tricky bugs (yeah, I'm that weird 😅).",
+      "Always learning something new and fitting it into my projects.",
     ],
     color: "bg-blue-600",
   },
@@ -18,9 +18,9 @@ const aboutSections = [
     icon: Code2,
     title: "What I Do",
     description: [
-      "Develop high-performance web apps using modern tech stacks.",
-      "Solve algorithmic problems and optimize code efficiency.",
-      "Contribute to open-source and follow industry trends.",
+      "I turn coffee into web apps ☕ → 💻 (and vice versa sometimes).",
+      "Love cracking algorithmic puzzles - like sudoku but with rewards.",
+      "Share my learnings with others because we all grow together 🌱.",
     ],
     color: "bg-purple-600",
   },
@@ -28,9 +28,9 @@ const aboutSections = [
     icon: GoGoal,
     title: "My Goals",
     description: [
-      "Build tech products that solve real-world challenges at scale.",
-      "Advance as a full-stack developer with modern frameworks.",
-      "Grow the dev community through open-source contributions.",
+      "Build products people actually need (not just GitHub flexes).",
+      "Become the dev who can handle anything - you just name it.",
+      "Land a sweet job and finally afford good coffee ☕ (and rent 😅).",
     ],
     color: "bg-green-600",
   },
@@ -38,9 +38,9 @@ const aboutSections = [
     icon: Lightbulb,
     title: "My Philosophy",
     description: [
-      "Technology should simplify lives, not complicate them.",
-      "Great software solves problems, not just writes code.",
-      "Continuous learning keeps you ahead in tech.",
+      "Code should make life easier, not give you more headaches 🤯.",
+      "The best solution is often the simplest one (KISS principle!).",
+      "Every day you don't learn something new is a wasted day in tech.",
     ],
     color: "bg-orange-600",
   },
@@ -51,19 +51,19 @@ export function About() {
     <SectionBackground>
       <section id="about">
         <div className="container mx-auto px-6">
-          <SectionTitle subtitle="Passionate developer building innovative solutions and solving real-world problems.">About Me</SectionTitle>
+          <SectionTitle subtitle="Just a curious developer who loves turning ideas into reality (and debugging at 2 AM)">About Me</SectionTitle>
 
           {/* Introduction */}
           <div className="max-w-5xl mx-auto mb-10 text-center">
             <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               Hey there! 👋 I'm <span className="text-blue-600 font-semibold">Deepak Modi</span>,
-              a final-year B.Tech Computer Science Engineering student passionate about building full-stack web applications that solve real-world problems.
-              I've created projects like NotesNeo for study notes, NeoCode for coding practice, and NeoCompiler for online code editing.
-              With skills in React, Next.js, TypeScript, Node.js, and Java, I love exploring new technologies, solving DSA problems on LeetCode, and working on AI-powered solutions.
+              a final-year CS student who somehow turned a "Hello World" tutorial into a full-blown coding obsession.
+              I've built stuff like NotesNeo (because finding notes shouldn't be a treasure hunt), NeoCode (the coding platform I wish existed when I started), and NeoCompiler (for when you need to test code but your laptop is being dramatic).
+              When I'm not wrestling with React hooks or trying to make my CSS actually work, you'll find me solving LeetCode problems or experimenting with whatever shiny new tech caught my attention this week.
             </p>
             <div className="mt-6 flex justify-center">
               <span className="text-sm sm:text-base inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 px-4 py-2 rounded-lg shadow">
-                🚀 I like to build products and solve problems
+                🚀 I turn coffee into code and bugs into features
               </span>
             </div>
           </div>

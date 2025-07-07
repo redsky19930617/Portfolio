@@ -38,7 +38,7 @@ export function Skills() {
     <SectionBackground>
       <section id="skills">
         <div className="container mx-auto px-6">
-          <SectionTitle subtitle="A modern tech stack designed for impact, efficiency, and scale.">Skills</SectionTitle>
+          <SectionTitle subtitle="The tech stack I've been collecting like Pokémon cards - gotta catch 'em all! 🎯">Skills</SectionTitle>
 
           <div className="max-w-6xl mx-auto grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4 sm:gap-6">
             {skills.map((tech) => (

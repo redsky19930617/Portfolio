@@ -28,7 +28,7 @@ export function Education() {
     <SectionBackground>
       <section id="education">
         <div className="container mx-auto px-8">
-          <SectionTitle subtitle="A solid academic foundation fueling my passion for tech innovation.">Education</SectionTitle>
+          <SectionTitle subtitle="Where I learned theory and then forgot half of it while learning to actually code 😅">Education</SectionTitle>
           <div className="max-w-5xl mx-auto space-y-10">
             {education.map((edu, index) => (
               <EducationCard key={edu.degree} {...edu} isLast={index === education.length - 1} />

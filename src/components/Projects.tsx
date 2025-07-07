@@ -38,7 +38,7 @@ const techStacks = {
 const projects = [
   {
     title: 'NotesNeo',
-    description: 'A notes sharing platform for university students with subject-wise notes, authentication, and personalised user dashboard to manage uploaded content.',
+    description: 'Built this because I was tired of hunting for notes everywhere! A platform where students can actually find and share quality notes by subject. No more "does anyone have notes?" in group chats 😄',
     image: '/assets/notesneo.webp',
     link: 'https://notesneo.vercel.app',
     github: 'https://github.com/decodewithdeepak/notesneo',
@@ -51,7 +51,7 @@ const projects = [
   },
   {
     title: 'NeoCode',
-    description: 'A coding platform with curated DSA sheets, roadmaps, CS articles, and a community forum for students to share resources and discuss challenges.',
+    description: 'My attempt to create the coding platform I wish I had when starting DSA. Curated problem sheets, roadmaps, and a community where you can actually get help without feeling dumb.',
     image: '/assets/neocode.webp',
     link: 'https://neocoding.vercel.app',
     github: 'https://github.com/decodewithdeepak/neocode',
@@ -65,7 +65,7 @@ const projects = [
   },
   {
     title: 'NeoCompiler',
-    description: 'An online compiler supporting multiple languages with auth, themes, and AI-assisted suggestions. Users can write, run, and share code snippets easily.',
+    description: 'Ever wanted to quickly test code without setting up your entire dev environment? This online compiler has your back! Multiple languages, themes, and even AI suggestions when you\'re stuck.',
     image: '/assets/neocompiler.webp',
     link: 'https://neocompiler.vercel.app',
     github: 'https://github.com/decodewithdeepak/neo-compiler',
@@ -80,7 +80,7 @@ const projects = [
   },
   {
     title: 'Portfolio',
-    description: 'A personal portfolio website showcasing projects, skills, blogs, and contact section with responsive design and modern UI/UX styling.',
+    description: 'You\'re looking at it right now! 😉 This site went through like 5 redesigns before I was happy with it. Clean, responsive, and shows off my work while keeping things simple and professional.',
     image: '/assets/portfolio.webp',
     link: 'https://deepakmodi.vercel.app',
     github: 'https://github.com/decodewithdeepak/portfolio',
@@ -94,7 +94,7 @@ const projects = [
   },
   {
     title: 'Braineo',
-    description: 'An online AI learning platform with courses, quizzes, and user authentication. Users can track progress and manage their learning journey.',
+    description: 'Learning shouldn\'t be boring! Built this AI-powered platform to make studying actually engaging instead of just memorizing stuff for exams. Interactive courses and quizzes.',
     image: '/assets/braineo.webp',
     link: 'https://braineo.vercel.app',
     github: 'https://github.com/decodewithdeepak/braineo',
@@ -108,7 +108,7 @@ const projects = [
   },
   {
     title: 'Placify',
-    description: 'A campus placement platform connecting students with recruiters. Features job listings, company profiles, and application tracking.',
+    description: 'Built this during placement season when I realized how chaotic the whole process was. A platform that actually makes job hunting on campus less stressful with proper job listings.',
     image: '/assets/placify.webp',
     github: 'https://github.com/decodewithdeepak/placify',
     techStack: [
@@ -121,7 +121,7 @@ const projects = [
   },
   {
     title: 'NeoFolio',
-    description: 'A portfolio website template for developers, showcasing projects and skills. Built with modern web technologies for easy customization.',
+    description: 'Too lazy to build a custom portfolio? Don\'t have time to code? I got you! This is a clean, modern template that developers can easily customize without writing a single line of code.',
     image: '/assets/neofolio.webp',
     link: 'https://neofolio.vercel.app',
     github: 'https://github.com/decodewithdeepak/neofolio',
@@ -135,7 +135,7 @@ const projects = [
   },
   {
     title: 'Finneo',
-    description: 'An AI-powered investment platform that helps beginners understand and plan their investments based on risk, capital, age, and financial goals.',
+    description: 'Investment advice shouldn\'t be rocket science! This AI-powered platform breaks down investing for beginners - just tell it your goals, risk tolerance, and budget, and you are good to go.',
     image: '/assets/finneo.webp',
     link: 'https://finneo.vercel.app',
     github: 'https://github.com/decodewithdeepak/finneo',
@@ -149,7 +149,7 @@ const projects = [
   },
   {
     title: 'Ajay Sharma',
-    description: 'A freelance project built for Ajay Sharma, a self-empowerment coach. Designed landing page, pricing section, and integrated payments.',
+    description: 'My first real freelance project! Built a landing page for Ajay Sharma, a self-empowerment coach. Clean design, clear pricing, and smooth payment integration for his coaching services.',
     image: '/assets/ajaysharma.webp',
     link: 'https://ajay-sharma.vercel.app',
     techStack: [
@@ -165,14 +165,14 @@ export function Projects() {
   return (<SectionBackground>
     <section id="projects">
       <div className="container mx-auto px-8">
-        <SectionTitle subtitle="Every project, a product. Every product, a solution with a story.">Projects</SectionTitle>
+        <SectionTitle subtitle="My code babies - they're not perfect, but they're mine and I love them">Projects</SectionTitle>
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
         </div>
-        
+
       </div>
     </section>
   </SectionBackground>

@@ -50,7 +50,7 @@ export function GitHub() {
     <SectionBackground>
       <section id="github">
         <div className="container mx-auto max-w-6xl px-8">
-          <SectionTitle subtitle="Code that lives, breathes, and contributes — open source and beyond.">GitHub Contributions</SectionTitle>
+          <SectionTitle subtitle="My GitHub is where I code and commit - check out my streak and repos I'm proud of">GitHub Contributions</SectionTitle>
 
           {/* Contribution Graph */}
           <div className="mb-10 flex flex-col items-center">

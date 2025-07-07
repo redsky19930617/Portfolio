@@ -7,7 +7,7 @@ export function Leetcode() {
     <SectionBackground>
       <section id="leetcode">
         <div className="container mx-auto max-w-6xl px-8">
-          <SectionTitle subtitle="DSA isn't just practice — it's how I sharpen problem-solving daily.">Leetcode Progress</SectionTitle>
+          <SectionTitle subtitle="Between classes and coding, I somehow manage to solve some DSA problems">Leetcode Progress</SectionTitle>
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Leetcode Activity Image */}
@@ -23,19 +23,13 @@ export function Leetcode() {
             {/* Leetcode Journey Text */}
             <div>
               <h3 className=" text-center text-2xl font-bold text-blue-600 dark:text-blue-400 mb-4">
-                My Leetcode Journey
+                My LeetCode Grind
               </h3>
               <p className=" text-center text-lg text-gray-600 dark:text-gray-300 mb-4">
-                Solving problems on Leetcode has helped me strengthen my Data
-                Structures and Algorithms skills. I enjoy tackling challenges that
-                push my problem-solving abilities and prepare me for technical
-                interviews.
+                Started solving LeetCode problems to get better at DSA and honestly, it's become a daily habit now. Some days I breeze through easy problems, other days medium problems make me question my life choices 😅
               </p>
               <p className=" text-center text-lg text-gray-600 dark:text-gray-300">
-                I've completed hundreds of problems across a variety of topics,
-                including arrays, trees, graphs, and dynamic programming. My goal
-                is to keep improving and stay consistent in learning and solving
-                new problems daily.
+                I've tackled problems across arrays, trees, graphs, and that scary beast called dynamic programming. The goal? Stay consistent, learn something new every day, and maybe not panic during technical interviews!
               </p>
 
               {/* LeetCode Profile Button */}

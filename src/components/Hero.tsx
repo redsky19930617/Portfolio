@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowDown } from 'lucide-react';
 import { Link } from './Link';
 import { TypeWriter } from './ui/TypeWriter';
@@ -9,11 +8,11 @@ import { ActionButtons } from './hero/ActionButtons';
 export function Hero() {
   const roles = [
     "Full-Stack Developer",
-    "DSA Enthusiast",
+    "Code Enthusiast",
     "Problem Solver",
-    "Content Creator",
-    "Tech Innovator",
-    "Lifelong Learner",
+    "Digital Creator",
+    "Tech Explorer",
+    "Caffeine-Powered Coder",
   ];
 
   return (
