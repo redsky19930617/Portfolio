@@ -28,7 +28,7 @@ export function Experience() {
     <SectionBackground>
       <section id="experience">
         <div className="container mx-auto px-8">
-          <SectionTitle subtitle="My journey from 'Hello World' to leading teams and building stuff people actually use">Experience</SectionTitle>
+          <SectionTitle subtitle="My journey from 'Hello World' to leading teams and building stuffs">Experience</SectionTitle>
           <div className="relative border-l-2 border-blue-600 dark:border-blue-500 max-w-5xl mx-auto space-y-10">
             {experiences.map((exp, index) => (
               <ExperienceCard key={index} {...exp} />
