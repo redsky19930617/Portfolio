@@ -29,6 +29,13 @@ const certifications = [
     image: "https://i.ibb.co/gMvXCmVQ/1e3f9e1e-9108-4685-bfa0-6325856f3823-1.png",
   },
   {
+    title: "MongoDB Node.js Developer Path",
+    issuer: "MongoDB University",
+    date: "July 2025",
+    link: "https://ti-user-certificates.s3.amazonaws.com/ae62dcd7-abdc-4e90-a570-83eccba49043/fa270117-257f-4f60-8fde-98ae083a7563-deepak-modi-330111ec-2788-4566-b46f-b6cca7389723-certificate.pdf",
+    image: "https://ti-user-certificates.s3.amazonaws.com/ae62dcd7-abdc-4e90-a570-83eccba49043/fa270117-257f-4f60-8fde-98ae083a7563-deepak-modi-330111ec-2788-4566-b46f-b6cca7389723-certificate.pdf",
+  },
+  {
     title: "JAVA Course - Mastering the Fundamentals",
     issuer: "Scaler",
     date: "Mar 2024",
