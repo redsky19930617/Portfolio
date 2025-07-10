@@ -50,7 +50,7 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       {/* Name */}
       <div>
-        <label htmlFor="name" className="block text-sm font-medium mb-2">
+        <label htmlFor="name" className="block font-medium mb-2">
           Name
         </label>
         <div className="relative">
@@ -72,7 +72,7 @@ export function ContactForm() {
 
       {/* Email */}
       <div>
-        <label htmlFor="email" className="block text-sm font-medium mb-2">
+        <label htmlFor="email" className="block font-medium mb-2">
           Email
         </label>
         <div className="relative">
@@ -94,7 +94,7 @@ export function ContactForm() {
 
       {/* Message */}
       <div>
-        <label htmlFor="message" className="block text-sm font-medium mb-2">
+        <label htmlFor="message" className="block font-medium mb-2">
           Message
         </label>
         <div className="relative">
@@ -130,7 +130,7 @@ export function ContactForm() {
 
       {/* Status Messages */}
       {status === 'success' && (
-        <p className="text-green-600 text-center mt-4">Message sent successfully!</p>
+        <p className="text-green-600 text-center mt-4">Got your message !<br></br>(I actually read every one)</p>
       )}
       {status === 'error' && (
         <p className="text-red-600 text-center mt-4">{errorMessage}</p>
