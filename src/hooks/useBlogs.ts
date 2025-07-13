@@ -8,6 +8,7 @@ interface Blog {
   brief: string;
   coverImage: string | null;
   slug: string;
+  publishedAt: string;
 }
 
 export function useBlogs() {
@@ -31,6 +32,7 @@ export function useBlogs() {
                           url
                         }
                         slug
+                        publishedAt
                       }
                     }
                   }
@@ -49,7 +51,7 @@ export function useBlogs() {
         });
 
         const data = await response.json();
-        // console.log("Hashnode API Response:", data); // Debugging Line
+        console.log("Hashnode API Response:", data); // Debugging Line
 
         if (data?.data?.user?.publications?.edges?.length > 0) {
           // Extract posts from the first publication
@@ -60,6 +62,7 @@ export function useBlogs() {
             brief: post.node.brief,
             coverImage: post.node.coverImage ? post.node.coverImage.url : null, // Use cover image URL
             slug: post.node.slug,
+            publishedAt: post.node.publishedAt,
           }));
 
           setBlogs(formattedBlogs);

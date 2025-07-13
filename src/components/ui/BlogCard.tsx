@@ -3,9 +3,10 @@ interface BlogCardProps {
   brief: string;
   coverImage: string | null;
   slug: string;
+  publishedAt: string;
 }
 
-export function BlogCard({ title, brief, coverImage, slug }: BlogCardProps) {
+export function BlogCard({ title, brief, coverImage, slug, publishedAt }: BlogCardProps) {
   return (
     <a
       href={`https://deepakmodi.hashnode.dev/${slug}`}
@@ -38,8 +39,10 @@ export function BlogCard({ title, brief, coverImage, slug }: BlogCardProps) {
         </p>
       </div>
 
-      {/* Read More Button */}
-      <div className="px-5 pb-4">
+      <div className="flex items-center justify-between px-5 pb-4">
+        <span className="text-sm text-gray-500 dark:text-gray-400">
+          Published: {new Date(publishedAt).toLocaleDateString()}
+        </span>
         <span className="inline-block text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline">
           Read More →
         </span>
