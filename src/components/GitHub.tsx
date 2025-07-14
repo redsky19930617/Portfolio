@@ -174,7 +174,7 @@ export function GitHub() {
                 >
                   <Github className="w-5 h-5" /> View Profile
                 </a>
-              </div>                    </div>
+              </div>
             </motion.div>
           )}
         </div>
