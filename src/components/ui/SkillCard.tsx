@@ -1,6 +1,6 @@
 import React from "react";
 import { IconType } from "react-icons";
-import { LucideIcon } from "lucide-react";
+import { DivideIcon as LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 
 const itemVariants = {
