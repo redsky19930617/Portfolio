@@ -1,5 +1,6 @@
 import React from 'react';
 import { Award, ExternalLink } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface CertificationCardProps {
   title: string;
@@ -11,12 +12,17 @@ interface CertificationCardProps {
 
 export function CertificationCard({ title, issuer, date, link, image }: CertificationCardProps) {
   return (
-    <div className="relative bg-white dark:bg-gray-900 rounded-lg shadow-xl transition-transform duration-300 overflow-hidden group">
+    <motion.div 
+      className="relative bg-white dark:bg-gray-900 rounded-lg shadow-xl transition-all duration-300 overflow-hidden group"
+      whileHover={{ scale: 1.02, y: -5 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+    >
       {/* Background Image */}
       <img
         src={image}
         alt={`${title} certification`}
         className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"
+        loading="lazy"
       />
 
       {/* Overlay */}
@@ -40,6 +46,6 @@ export function CertificationCard({ title, issuer, date, link, image }: Certific
           <ExternalLink className="w-4 h-4" />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }

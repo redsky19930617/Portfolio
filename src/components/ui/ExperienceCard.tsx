@@ -1,5 +1,18 @@
 import React from "react";
 import { Briefcase } from "lucide-react";
+import { motion } from "framer-motion";
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
 
 interface ExperienceCardProps {
   title: string;
@@ -17,12 +30,21 @@ export function ExperienceCard({
   skills,
 }: ExperienceCardProps) {
   return (
-    <div className="relative group pl-6 sm:pl-10">
+    <motion.div 
+      variants={itemVariants}
+      whileHover={{ x: 5 }}
+      transition={{ duration: 0.3 }}
+      className="relative group pl-6 sm:pl-10"
+    >
       {/* Timeline Dot */}
-      <div className="absolute left-[-16px] top-4 w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-full border-4 border-gray-200 dark:border-gray-800"></div>
+      <motion.div 
+        className="absolute left-[-16px] top-4 w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-full border-4 border-gray-200 dark:border-gray-800"
+        whileHover={{ scale: 1.2 }}
+        transition={{ duration: 0.2 }}
+      ></motion.div>
 
       {/* Experience Card */}
-      <div className="relative bg-white dark:bg-gray-900 p-4 sm:p-6 rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-xl">
+      <div className="relative bg-white dark:bg-gray-900 p-4 sm:p-6 rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300">
         
         <div className="relative z-10">
           {/* Header */}
@@ -60,6 +82,6 @@ export function ExperienceCard({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

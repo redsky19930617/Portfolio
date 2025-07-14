@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { SectionTitle } from "./ui/SectionTitle";
 import { SectionBackground } from "./ui/SectionBackground";
 import { CertificationCard } from "./ui/CertificationCard";
+import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -52,7 +53,7 @@ export function Certifications() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 3000,
     pauseOnHover: true,
 
     responsive: [
@@ -65,13 +66,20 @@ export function Certifications() {
     <section id="certifications">
       <div className="container mx-auto px-8">
         <SectionTitle subtitle="Some courses I actually completed instead of just bookmarking them - fancy certificates!">Certifications</SectionTitle>
-        <Slider {...settings} className="max-w-6xl mx-auto">
-          {certifications.map((cert) => (
-            <div key={cert.title} className="px-4">
-              <CertificationCard {...cert} />
-            </div>
-          ))}
-        </Slider>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <Slider {...settings} className="max-w-6xl mx-auto">
+            {certifications.map((cert) => (
+              <div key={cert.title} className="px-4">
+                <CertificationCard {...cert} />
+              </div>
+            ))}
+          </Slider>
+        </motion.div>
       </div>
     </section>
   </SectionBackground>

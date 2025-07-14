@@ -1,6 +1,19 @@
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 import { EducationCard } from './ui/EducationCard';
+import { motion } from 'framer-motion';
+
+// Animation variants for education timeline
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
 
 const education = [
   {
@@ -29,11 +42,17 @@ export function Education() {
       <section id="education">
         <div className="container mx-auto px-8">
           <SectionTitle subtitle="Where I learned theory and then forgot half of it while learning to actually code 😅">Education</SectionTitle>
-          <div className="max-w-5xl mx-auto space-y-10">
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="max-w-5xl mx-auto space-y-10"
+          >
             {education.map((edu, index) => (
               <EducationCard key={edu.degree} {...edu} isLast={index === education.length - 1} />
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </SectionBackground>

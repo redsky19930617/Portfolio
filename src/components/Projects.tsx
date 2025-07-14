@@ -1,6 +1,7 @@
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 import { ProjectCard } from './ui/ProjectCard';
+import { motion } from 'framer-motion';
 import {
   SiReact,
   SiNodedotjs,
@@ -34,7 +35,7 @@ const techStacks = {
   appwrite: { icon: SiAppwrite, name: "Appwrite", color: '#ff3d00' },
 };
 
-// Define projects data
+// Define projects data with size property for bento grid
 const projects = [
   {
     title: 'NotesNeo',
@@ -42,6 +43,7 @@ const projects = [
     image: '/assets/notesneo.webp',
     link: 'https://notesneo.vercel.app',
     github: 'https://github.com/decodewithdeepak/notesneo',
+    size: 'large', // Takes more space
     techStack: [
       techStacks.react,
       techStacks.tailwind,
@@ -55,6 +57,7 @@ const projects = [
     image: '/assets/neocode.webp',
     link: 'https://neocoding.vercel.app',
     github: 'https://github.com/decodewithdeepak/neocode',
+    size: 'wide', // Takes more width
     techStack: [
       techStacks.react,
       techStacks.tailwind,
@@ -69,6 +72,7 @@ const projects = [
     image: '/assets/neocompiler.webp',
     link: 'https://neocompiler.vercel.app',
     github: 'https://github.com/decodewithdeepak/neo-compiler',
+    size: 'normal',
     techStack: [
       techStacks.next,
       techStacks.typescript,
@@ -84,6 +88,7 @@ const projects = [
     image: '/assets/portfolio.webp',
     link: 'https://deepakmodi.vercel.app',
     github: 'https://github.com/decodewithdeepak/portfolio',
+    size: 'normal',
     techStack: [
       techStacks.next,
       techStacks.react,
@@ -98,6 +103,7 @@ const projects = [
     image: '/assets/braineo.webp',
     link: 'https://braineo.vercel.app',
     github: 'https://github.com/decodewithdeepak/braineo',
+    size: 'tall', // Takes more height
     techStack: [
       techStacks.react,
       techStacks.typescript,
@@ -111,6 +117,7 @@ const projects = [
     description: 'Built this during placement season when I realized how chaotic the whole process was. A platform that actually makes job hunting on campus less stressful with proper job listings.',
     image: '/assets/placify.webp',
     github: 'https://github.com/decodewithdeepak/placify',
+    size: 'normal',
     techStack: [
       techStacks.next,
       techStacks.typescript,
@@ -125,6 +132,7 @@ const projects = [
     image: '/assets/neofolio.webp',
     link: 'https://neofolio.vercel.app',
     github: 'https://github.com/decodewithdeepak/neofolio',
+    size: 'wide',
     techStack: [
       techStacks.react,
       techStacks.typescript,
@@ -139,6 +147,7 @@ const projects = [
     image: '/assets/finneo.webp',
     link: 'https://finneo.vercel.app',
     github: 'https://github.com/decodewithdeepak/finneo',
+    size: 'normal',
     techStack: [
       techStacks.react,
       techStacks.typescript,
@@ -152,6 +161,7 @@ const projects = [
     description: 'My first real freelance project! Built a landing page for Ajay Sharma, a self-empowerment coach. Clean design, clear pricing, and smooth payment integration for his coaching services.',
     image: '/assets/ajaysharma.webp',
     link: 'https://ajay-sharma.vercel.app',
+    size: 'normal',
     techStack: [
       techStacks.react,
       techStacks.typescript,
@@ -161,20 +171,72 @@ const projects = [
   },
 ];
 
+// Animation variants for staggered children
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
+// Helper function to get grid classes based on size
+const getGridClasses = (size: string) => {
+  switch (size) {
+    case 'large':
+      return 'md:col-span-2 md:row-span-2';
+    case 'wide':
+      return 'md:col-span-2';
+    case 'tall':
+      return 'md:row-span-2';
+    default:
+      return '';
+  }
+};
+
 export function Projects() {
-  return (<SectionBackground>
-    <section id="projects">
-      <div className="container mx-auto px-8">
-        <SectionTitle subtitle="My code babies - they're not perfect, but they're mine and I love them">Projects</SectionTitle>
+  return (
+    <SectionBackground>
+      <section id="projects">
+        <div className="container mx-auto px-8">
+          <SectionTitle subtitle="My code babies - they're not perfect, but they're mine and I love them">Projects</SectionTitle>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
-          ))}
+          {/* Bento Grid Layout */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-fr"
+          >
+            {projects.map((project, index) => (
+              <motion.div
+                key={project.title}
+                variants={itemVariants}
+                className={`${getGridClasses(project.size)} group`}
+              >
+                <ProjectCard {...project} />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-
-      </div>
-    </section>
-  </SectionBackground>
+      </section>
+    </SectionBackground>
   );
 }
