@@ -1,19 +1,6 @@
 import { SectionTitle } from "./ui/SectionTitle";
 import { SectionBackground } from "./ui/SectionBackground";
 import { ExperienceCard } from "./ui/ExperienceCard";
-import { motion } from "framer-motion";
-
-// Animation variants for timeline
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-      delayChildren: 0.2,
-    },
-  },
-};
 
 const experiences = [
   {
@@ -42,17 +29,11 @@ export function Experience() {
       <section id="experience">
         <div className="container mx-auto px-8">
           <SectionTitle subtitle="My journey from 'Hello World' to leading teams and building stuffs">Experience</SectionTitle>
-          <motion.div 
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="relative border-l-2 border-blue-600 dark:border-blue-500 max-w-5xl mx-auto space-y-10"
-          >
+          <div className="relative border-l-2 border-blue-600 dark:border-blue-500 max-w-5xl mx-auto space-y-10">
             {experiences.map((exp, index) => (
               <ExperienceCard key={index} {...exp} />
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
     </SectionBackground>

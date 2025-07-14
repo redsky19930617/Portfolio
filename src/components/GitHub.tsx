@@ -3,31 +3,6 @@ import GitHubCalendar from "react-github-calendar";
 import { SectionTitle } from "./ui/SectionTitle";
 import { SectionBackground } from "./ui/SectionBackground";
 import { Github } from "lucide-react";
-import { motion } from "framer-motion";
-
-// Animation variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.3,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, x: -20 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
 
 interface Repo {
   name: string;
@@ -78,15 +53,9 @@ export function GitHub() {
           <SectionTitle subtitle="My GitHub is where I code and commit - check out my streak and repos I'm proud of">GitHub Contributions</SectionTitle>
 
           {/* Contribution Graph */}
-          <motion.div 
-            className="mb-10 flex flex-col items-center"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
+          <div className="mb-10 flex flex-col items-center">
             {/* Card-like container for the GitHub calendar */}
-            <div className="w-full p-6 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="w-full p-6 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg">
               <GitHubCalendar
                 username="decodewithdeepak"
                 blockSize={14.6}
@@ -97,26 +66,17 @@ export function GitHub() {
                 }}
               />
             </div>
-          </motion.div>
+          </div>
 
           {/* Top Repositories */}
-          <motion.div 
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="mx-auto max-w-6xl grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-8"
-          >
+          <div className="mx-auto max-w-6xl grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-8">
             {repos.map((repo) => (
-              <motion.a
+              <a
                 key={repo.name}
-                variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
-                transition={{ duration: 0.3 }}
                 href={repo.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block p-6 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg shadow hover:shadow-xl hover:shadow-blue-500/20 hover:border-blue-500/50 transition-all duration-300"
+                className="block p-6 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-transform duration-300 transform hover:scale-105"
               >
                 <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400">
                   {repo.name}
@@ -131,19 +91,13 @@ export function GitHub() {
                     <span>🍴 {repo.forks}</span>
                   </div>
                 </div>
-              </motion.a>
+              </a>
             ))}
-          </motion.div>
+          </div>
 
           {/* GitHub Profile Widget */}
           {user && (
-            <motion.div 
-              className="flex flex-col md:flex-row items-center justify-between bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
+            <div className="flex flex-col md:flex-row items-center justify-between bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg p-6 shadow-lg">
               {/* Avatar & Name */}
               <div className="flex items-center space-x-4">
                 <img
@@ -175,7 +129,6 @@ export function GitHub() {
                   <Github className="w-5 h-5" /> View Profile
                 </a>
               </div>                    </div>
-            </motion.div>
           )}
         </div>
       </section>

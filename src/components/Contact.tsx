@@ -2,7 +2,6 @@ import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 import { ContactForm } from './ui/ContactForm';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 export function Contact() {
   return (
@@ -11,21 +10,9 @@ export function Contact() {
         <div className="container mx-auto px-4">
           <SectionTitle subtitle="Got a cool project idea? Want to collaborate? Or just want to say hi? Drop me a line!">Get In Touch</SectionTitle>
 
-          <motion.div 
-            className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
             {/* Left Column: Contact Info */}
-            <motion.div 
-              className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
+            <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg">
               <h3 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-100">Let's Connect</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-8">
                 Whether you've got a crazy project idea, want to collaborate on something awesome, or just want to chat about tech over coffee ☕ - I'm all ears! And yes, this actually goes straight to my inbox, not some random void like other contact forms.
@@ -58,19 +45,13 @@ export function Contact() {
                   <span>linkedin.com/in/deepakmodi1</span>
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right Column: Contact Form */}
-            <motion.div 
-              className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
+            <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg">
               <ContactForm />
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
     </SectionBackground>

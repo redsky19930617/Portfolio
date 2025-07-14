@@ -1,31 +1,5 @@
 import { SectionTitle } from "./ui/SectionTitle";
 import { SectionBackground } from "./ui/SectionBackground";
-import { motion } from "framer-motion";
-
-// Animation variants for masonry-like layout
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, scale: 0.8, rotateY: -15 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    rotateY: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
 
 const badges = [
   {
@@ -99,36 +73,23 @@ export function Badges() {
         <div className="container mx-auto max-w-6xl px-8">
           <SectionTitle subtitle="Some shiny badges I've collected while grinding - I actually solve stuff! 🏆">Coding Badges</SectionTitle>
 
-          <motion.div 
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 sm:gap-8 gap-4"
-          >
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 sm:gap-8 gap-4">
             {badges.map((badge) => (
-              <motion.a
+              <a
                 key={badge.id}
-                variants={itemVariants}
-                whileHover={{ 
-                  scale: 1.05, 
-                  rotateY: 5,
-                  transition: { duration: 0.3 }
-                }}
                 href={badge.profile}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative group flex flex-col items-center justify-center p-5 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300"
+                className="relative group flex flex-col items-center justify-center p-5 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md hover:shadow-2xl transition-transform duration-300 transform hover:scale-105"
               >
                 {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-blue-500 opacity-0 group-hover:opacity-30 rounded-xl blur-lg transition-all duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-blue-500 opacity-0 group-hover:opacity-20 rounded-xl blur-lg transition-all duration-300" />
 
                 {/* Badge Image */}
                 <img
                   src={badge.image}
                   alt={badge.platform}
                   className="w-30 h-30 rounded-md transition-transform duration-300 group-hover:scale-110"
-                  loading="lazy"
                 />
 
                 {/* Badge Text */}
@@ -136,9 +97,9 @@ export function Badges() {
                   {badge.title}
                 </p>
                 <span className="text-sm text-gray-600 dark:text-gray-400">{badge.platform}</span>
-              </motion.a>
+              </a>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
     </SectionBackground>
