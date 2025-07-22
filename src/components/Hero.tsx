@@ -37,7 +37,7 @@ export function Hero() {
                 Hey! <span className="inline-block origin-[70%_70%] animate-wave">👋</span> I'm
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient">
-                Deepak Modi
+                Roman Ivanyshyn
               </h1>
               <div className="text-xl md:text-2xl text-gray-600 dark:text-gray-300">
                 I'm a <TypeWriter words={roles} delay={100} />
@@ -58,11 +58,7 @@ export function Hero() {
             <div className="absolute w-20 h-20 bg-yellow-500 bottom-4 left-4 rounded-full animate-floating delay-450" />
 
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
-            <img
-              src="/assets/profile.webp"
-              alt="Deepak Modi"
-              className="relative w-full max-w-lg mx-auto rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-500"
-            />
+            <img src="/assets/profile.webp" alt="Roman Ivanyshyn" className="rounded-full w-48 h-48 object-cover border-4 border-blue-600 shadow-lg" />
           </div>
 
         </div>

@@ -56,10 +56,10 @@ export function About() {
           {/* Introduction */}
           <div className="max-w-5xl mx-auto mb-10 text-center">
             <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              Hey there! 👋 I'm <span className="text-blue-600 font-semibold">Deepak Modi</span>,
+              Hey there! 👋 I'm <span className="text-blue-600 font-semibold">Roman Ivanyshyn</span>,
               a final-year CS student who somehow turned a "Hello World" tutorial into a full-blown coding obsession.
               I've built stuff like NotesNeo (because finding notes shouldn't be a treasure hunt), NeoCode (the coding platform I wish existed when I started), and NeoCompiler (for when you need to test code but your laptop is being dramatic).
-              When I'm not wrestling with React hooks or trying to make my CSS actually work, you'll find me solving LeetCode problems or experimenting with whatever shiny new tech caught my attention this week.
+              When I'm not wrestling with React hooks or trying to make my CSS actually work, you'll find me experimenting with whatever shiny new tech caught my attention this week.
             </p>
             <div className="mt-6 flex justify-center">
               <span className="text-sm sm:text-base inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 px-4 py-2 rounded-lg shadow">
